@@ -56,6 +56,13 @@
         }
     </style>
 </head>
+<h1>Welcome to Your Website</h1>
+<ul>
+    {% for item in employee %}
+        <li>{{ item }}</li>
+    {% endfor %}
+</ul>
+
 <body>
     <header>
         <h1>Animal Hospital</h1>
