@@ -1,43 +1,94 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>ให้ลาบก้อยเยียวยา</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Hospital</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 10px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
 </head>
 <body>
-	<audio id="myAudio" controls>
-        <source src="Okinawa.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-	<div id="paper">
-		<div class="sun">
-			<div class="sun_radius-1"></div>
-			<div class="sun_radius-2"></div>
-			<div class="sun_circle"></div>
-		</div>
-		<div class="moon"></div>
-		<div class="cloud cloud-1">
-			<div class="cloud-c1"></div>
-			<div class="cloud-c2"></div>
-			<div class="cloud-c3"></div>
-		</div>
-		<div class="cloud cloud-2">
-			<div class="cloud-c1"></div>
-			<div class="cloud-c2"></div>
-			<div class="cloud-c3"></div>
-		</div>
-		<div class="cloud cloud-3">
-			<div class="cloud-c1"></div>
-			<div class="cloud-c2"></div>
-			<div class="cloud-c3"></div>
-		</div>
-		<div class="ground"></div>
-		<img src="men_1.png" class="men">
-		<img src="women_1.png" class="women">
-		<img src="1.png" class="mou">
-		<img src="wolf_1.jpg" class="wolf">
-		<img src="bird_1.png" class="bird">
-		<img src = "khao-2.png" class="ground2">
-	</div>
+    <header>
+        <h1>Animal Hospital</h1>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">About Us</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="container">
+        <h2>Welcome to Our Animal Hospital</h2>
+        <p>We provide compassionate care for your beloved pets.</p>
+
+        <h2>Our Services</h2>
+        <ul>
+            <li>General Check-ups</li>
+            <li>Vaccinations</li>
+            <li>Surgery</li>
+            <li>Dental Care</li>
+        </ul>
+
+        <h2>About Us</h2>
+        <p>We are a dedicated team of veterinarians and staff who love animals and are committed to their well-being.</p>
+
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need to schedule an appointment, please don't hesitate to contact us.</p>
+    </div>
+
+    <footer>
+        &copy; 2023 Animal Hospital
+    </footer>
 </body>
 </html>
