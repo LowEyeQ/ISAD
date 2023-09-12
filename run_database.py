@@ -1,30 +1,35 @@
+from flask import Flask, render_template
 import mysql.connector
+from config import DATABASE_CONFIG
 
-# Define database connection parameters
-config = {
-    'user': 'root',
-    'password': '0987654321',
-    'host': 'localhost',  # e.g., 'localhost'
-    'database': 'database isad',
-}
+app = Flask(__name__)
 
-# Establish a database connection
-try:
-    conn = mysql.connector.connect(**config)
-    cursor = conn.cursor()
+# Use the database configuration from config.py
+db_config = DATABASE_CONFIG
 
-    # Execute SQL queries
-    cursor.execute('SELECT * FROM employee')
-    data = cursor.fetchall()
+@app.route('/')
+def index():
+    try:
+        # Create a MySQL database connection
+        conn = mysql.connector.connect(**db_config)
+        if conn.is_connected():
+            print("Connected to MySQL database")
 
-    # Print the retrieved data
-    for row in data:
-        print(row)
+            # Perform a SELECT query
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM Employees")  # Replace 'your_table' with your actual table name
+            data = cursor.fetchall()
+            cursor.close()
 
-except mysql.connector.Error as err:
-    print(f"Error: {err}")
+            return render_template('index.html', data=data)
+        else:
+            return "Unable to connect to MySQL database"
 
-finally:
-    # Close the cursor and database connection
-    cursor.close()
-    conn.close()
+    except mysql.connector.Error as err:
+        return f"Error: {err}"
+
+    finally:
+        conn.close()
+
+if __name__ == '__main__':
+    app.run(debug=True)
