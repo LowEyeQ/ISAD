@@ -13,12 +13,12 @@ app.config['MYSQL_DB'] = DATABASE_CONFIG['database']
 mysql = MySQL(app)
 
 @app.route('/')
-def index():
+def indexs():
     cur = mysql.connection.cursor()
     cur.execute("SELECT  * FROM employee")  # เปลี่ยน your_table เป็นชื่อตารางของคุณ
     data = cur.fetchall()
     cur.close()
     return render_template('index.html', data=data)
-
 if __name__ == '__main__':
     app.run(debug=True)
+
