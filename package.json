@@ -8,12 +8,7 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production" // คำสั่งสำหรับสร้างโปรดักชันในโหมด production
+        "production": "mix --production"
 
-    },
-    "devDependencies": {
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.8.0",
-        "vite": "^4.0.0"
     }
 }
