@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -57,11 +57,6 @@
     </style>
 </head>
 <h1>Welcome to Your Website</h1>
-    <ul>
-        {% for item in data %}
-            <li>{{ item }}</li>
-        {% endfor %}
-    </ul>
 
 <body>
     <header>
@@ -97,33 +92,5 @@
     <footer>
         &copy; 2023 Animal Hospital
     </footer>
-</body>
-</html> -->
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Data from MySQL</title>
-</head>
-<body>
-    <h1>Data from MySQL Database</h1>
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Other Fields</th>
-        </tr>
-        {% for row in data %}
-        <tr>
-            <ul>
-                {% for item in data %}
-                    <li>{{ item }}</li>
-                {% endfor %}
-            </ul>
-            <td>{{ row.idEmp }}</td>
-            <td>{{ row.Last_nameEmp }}</td>
-            <td>{{ row.ageEmp }}</td>
-        </tr>
-        {% endfor %}
-    </table>
 </body>
 </html>
