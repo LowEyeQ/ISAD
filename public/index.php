@@ -31,7 +31,7 @@ if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php'))
 |
 */
 
-require __DIR__.'/../views/welcome.blade';
+require __DIR__.'/../views/welcome.blade.php';
 
 /*
 |--------------------------------------------------------------------------
