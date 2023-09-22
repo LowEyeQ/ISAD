@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Mail\NotificationMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\MainController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,6 +17,8 @@ use App\Http\Controllers\MailController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/main',[MainController::class,'index']);
 
 Route::get('/', function () {
     return view('welcome');
