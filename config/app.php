@@ -126,6 +126,8 @@ return [
 
     'cipher' => 'AES-256-CBC',
 
+
+
     /*
     |--------------------------------------------------------------------------
     | Maintenance Mode Driver
@@ -165,9 +167,10 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class,
     ])->toArray(),
 
     /*
@@ -181,8 +184,8 @@ return [
     |
     */
 
-    'aliases' => Facade::defaultAliases()->merge([
-        // 'Example' => App\Facades\Example::class,
-    ])->toArray(),
+    'aliases' => [
+        'PDF' => Barryvdh\DomPDF\Facade::class,
+    ],
 
 ];

@@ -1,3 +1,7 @@
+<?php
+    use Illuminate\Support\Facades\Auth;
+?>
+
 <x-app-layout>
     <x-slot name="header">
         <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg">
@@ -18,7 +22,6 @@
                                     <th scope="col">ชื่อ</th>
                                     <th scope="col">อีเมล</th>
                                     <th scope="col">เข้าสู่ระบบ</th>
-                                    <th scope="col">เริ่มใช้งานระบบ</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -29,7 +32,6 @@
                                         <td>{{$row->name}}</td>
                                         <td>{{$row->email}}</td>
                                         <td>{{$row->created_at}}</td>
-                                        <td>{{$row->created_at->diffforhumans()}}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

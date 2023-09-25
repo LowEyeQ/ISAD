@@ -7,6 +7,15 @@ use App\Mail\NotificationMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\DocController;
+use App\Http\Controllers\UserController;
+use Illuminate\Support\Facades\Storage;
+use App\Http\Controllers\PdfController;
+
+use App\Http\Controllers\AppointmentController;
+use Barryvdh\DomPDF\Facade as PDFFacade;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,11 +27,22 @@ use App\Http\Controllers\MainController;
 |
 */
 
+Route::get('/certificate',[DocController::class,'doc']);
+
+
+Route::get('/user-location', [UserController::class,'showLocation']);
+
+Route::get('/',[MainController::class,'index']);
+
+
+
 Route::get('/main',[MainController::class,'index']);
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/paper', [DocController::class, 'doc']);
+
+// Route::get('/', function () { //เอาของ laravel ออก
+//     return view('welcome');
+// });
 
 Route::get('/dashboard', function () {
     $users= User::all();
@@ -37,4 +57,21 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/sendmail', [MailController::class, 'notification']);
 
+Route::get('/calendar', [AppointmentController::class, 'index']);
+
+Route::post('/', [AppointmentController::class, 'store']);
+
+Route::post('/export_pdf', [PdfController::class, 'export_pdf'])->name('export_pdf');
+
+
+Route::get('/generate-pdf', function () {
+    $pdf = PDF::loadView('pdf_template'); // Load your Blade Template
+
+    return $pdf->stream(); // Stream the PDF to the browser for viewing or download
+});
+// Route::get('/fonts/NotoSerifThai-VariableFont_wdth,wght.ttf', function ($filename) {
+//     $font = Storage::disk('local')->get("fonts/$filename");
+//     return response($font, 200)->header('Content-Type', 'font/ttf');
+// })->where('filename', '.*\.ttf');
 require __DIR__.'/auth.php';
+

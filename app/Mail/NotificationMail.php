@@ -30,7 +30,7 @@ class NotificationMail extends Mailable
      */
     public function build()
     {
-        return $this->from('example@cambotutorial.com', 'Cambo Tutorial')
+        return $this->from('Hosipital@มะเเอ๊ะ.com', 'Hosipital มะเเอ๊ะ')
         ->subject($this->data["subject"])
                     ->view('emails.notification')->with("data",$this->data);
     }

@@ -1,0 +1,100 @@
+        * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Roboto', sans-serif;
+                letter-spacing: 2px;
+            }
+
+            header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                padding: 10px 120px;
+                background-color: #0d50cc9b;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                z-index: 100;
+            }
+
+            .logo {
+                font-size: 30px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+            }
+
+            nav a {
+                font-size: 18px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+                margin-left: 20px;
+                transition: 1s;
+            }
+
+            nav a:hover,
+            nav a.active {
+                color: #0ef;
+            }
+
+            nav {
+                display: flex;
+                align-items: center;
+            }
+
+            .menu-items {
+                font-size: 30px;
+                color: #fff;
+                text-decoration: none;
+                font-weight: 600;
+                margin-left: 50px;
+                transition: 1s;
+            }
+
+            .menu-items:hover,
+            .menu-items.active {
+                color: #0ef;
+            }
+
+            section {
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: #1f242d;
+                font-size: 100px;
+                color: #fff;
+            }
+
+            section:nth-child(odd) {
+                background: #0ef;
+            }
+
+            .pic_home {
+                width: 100%;
+            }
+
+            ul.submenu {
+                list-style: none;
+                size: 22;
+                width: 210px;
+                height: 120px;
+                position: absolute;
+                background-color: #22438C;
+                z-index: 999;
+                display: none;
+            }
+
+            .sub {
+                padding-bottom: 15px;
+            }
+
+            ul.dropdown:hover ul.submenu {
+                display: block;
+            }
+
+
+

@@ -1,0 +1,56 @@
+html { color-scheme: light }
+
+body{
+    color:rgb(0, 0, 0);
+    font-size: 15px;
+    line-height: 1;
+    text-align: center;
+    background-image: url("https://scontent.fbkk29-6.fna.fbcdn.net/v/t39.30808-6/382974796_1672782679908367_4366146618867634027_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=49d041&_nc_eui2=AeEYdlOZi-0sPxRlHbsiSk8vVWSdxqg9RWtVZJ3GqD1Fazs094C0hNSk7d4OtTKYreyteSCMGUPAqH85qr5kKdlT&_nc_ohc=_3u8hGCU0FcAX858vcv&_nc_ht=scontent.fbkk29-6.fna&oh=00_AfCHjvesosSuj4emgj1nFim3-GOR6wNgzcdvKsqBGTJ45w&oe=6513BFBB");
+    background-size: cover; /* ปรับขนาดรูปภาพให้เต็มพื้นที่ขององค์ประกอบ */
+    background-repeat: no-repeat; /* ไม่รีพีทรูปภาพ */
+    background-attachment: fixed; /* ให้รูปภาพติดตามหน้าเว็บ */
+    /* เพิ่มคุณสมบัติอื่น ๆ ตามต้องการ */
+}
+
+.TableC {
+  width: min(900px, 100% - 3rem);
+  margin-inline: auto;
+}
+
+table{
+    /* border-collapse: collapse; */
+    width: 100%; /* ทำให้ตารางเต็มความกว้างของพื้นที่ของ div.TableC */
+    margin: 0 auto; /* ทำให้ตารางอยู่ตรงกลางของหน้าเว็บ */
+    background: #fe8f536f; /* สีตัวอักษร */
+    ;
+    padding: 1.5rem; /* ระยะห่างระหว่างตัวอักษรกับขอบกรอบตาราง */
+}
+
+th, td{
+    background: #fe8e53; /* สีตัวอักษร */
+    padding: 1rem;
+    text-align: center; /* อักษรอยู่กึ่งกลาง*/
+}
+
+th{
+    background: hsla(0, 0%, 100%, 0.1);
+}
+
+.table-container{ /* ทำให้มี scroll bar เวลาย่อแบบ auto */
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: auto;
+}
+
+caption{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    margin-bottom: 40px;
+    font-weight: bold;
+    stroke: 2px black;
+}
+
+/* ใช้ margin-top เพื่อขยับตารางลงมา */
+table {
+    margin-top: 60px; /* ปรับค่าตามความต้องการ */
+}
