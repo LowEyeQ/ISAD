@@ -1,43 +1,62 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-    <title>Certificate Table</title>
-    <!-- <link rel="stylesheet" type="text/css" href="certable.css"> -->
-    <link rel="stylesheet" href="{{ mix('css/certificate.css') }}">
-    <script src="{{ mix('js/certificate.js') }}"></script>
-</head>
-<body>
-  <!-- <img src="C\Users\H:P\Downloads\jf-brou-915UJQaxtrk-unsplash.jpg" alt="Image Description" width="800" height="500"> -->
-  <main>
-    <div class="TableC">
-      <!-- <h1> Purin's Certificate Data Table </h1> -->
-      <div class="table-container">
-      <table>
-        <caption> Purin's Certificate Data Table </caption>
-        <tr>
-            <th> Examination ID </th>
-            <th> Pet ID </th>
-            <th> Pet Name </th>
-            <th> Date </th>
-            <th> Veterinary ID </th>
-        </tr>
-        <tr id="ex1" href="{{route('export_pdf')}}"><!-- เพิ่มใหม่ -->
-            <td data-cell="Examination ID" > EX0001 </td>
-            <td data-cell="Pet ID" > D00001 </td>
-            <td data-cell="Pet Name" > Teddy </td>
-            <td data-cell="Date" > 14/2/2023 </td>
-            <td data-cell="Veterinary ID" > V00001 </td>
-        </tr>
-        <tr id="ex2">
-          <td data-cell="Examination ID" > EX0002 </td>
-          <td data-cell="Pet ID" > C00001 </td>
-          <td data-cell="Pet Name" > Kitty </td>
-          <td data-cell="Date" > 20/2/2023 </td>
-          <td data-cell="Veterinary ID" > V00003 </td>
-      </tr>
-      </table>
-    </div>
-    </div>
-  </main>
-</body>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
+        <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.bunny.net">
+        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        
+        <script src="{{ asset('resources/js/script.js') }}" ></script>
+
+        <!-- Scripts -->
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+        <script src="{{ mix('js/app.js') }}"></script>
+        
+    </head>
+    <body>
+    <div class="place-content-center ">
+            <div class="container">
+                <div class="row">
+                    <table class="shadow-md min-w-full text-center font-light">
+                                <thead class="border-2 bg-slate-300  font-light dark:bord text-xl er-neutral-500">
+                                <tr>
+                                    <th scope="col">Exam ID</th>
+                                    <th scope="col">Pet ID</th>
+                                    <th scope="col">Pet Name</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">Veterinary ID</th>
+
+                                </tr>
+                                </thead>
+                                <tbody>
+                                  @php($i =1)
+                                    @foreach ( $MediExam as $row )  
+                                    <tr>
+                                        <th>{{$i++}}</th>
+                                        <td>{{$row->exam_id}}</td>
+                                        <td>{{$row->pet_id}}</td>
+                                        <td>{{$row->temp}}</td>
+                                    </tr>
+                                    @endforeach
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+    </body>
+
+
 </html>
+
+
+
+    
+

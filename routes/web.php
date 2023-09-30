@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Models\MediExam;
 use App\Mail\NotificationMail;
 use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\MailController;
@@ -46,7 +47,8 @@ Route::get('/paper', [DocController::class, 'doc']);
 
 Route::get('/dashboard', function () {
     $users= User::all();
-    return view('dashboard', compact('users'));
+    $MediExam=MediExam::all();
+    return view('dashboard', compact("MediExam"));
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -66,7 +68,7 @@ Route::post('/export_pdf', [PdfController::class, 'export_pdf'])->name('export_p
 
 Route::get('/generate-pdf', function () {
     $pdf = PDF::loadView('pdf_template'); // Load your Blade Template
-
+    
     return $pdf->stream(); // Stream the PDF to the browser for viewing or download
 });
 // Route::get('/fonts/NotoSerifThai-VariableFont_wdth,wght.ttf', function ($filename) {
