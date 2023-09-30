@@ -38,8 +38,7 @@
     </header>
 
     <section id="home">
-        <img class="pic_home"
-            src="https://lh3.googleusercontent.com/2Tbi2DKjvR0izsrSRPZFi6ik3Mb5cUc1cG1uTv78Yxj9cE0rCQEoz4KzHB5ymJa3AfyICB-3lGkN4zgU1t4s13mfWtw97paZ25mvbk9LbA">
+        <div class="pic_home"></div>
     </section>
     <section id="service">Service</section>
     <section id="about">About</section>
