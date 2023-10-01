@@ -65,10 +65,10 @@
 <body>
     <h1>ใบรับรองการตรวจสุขภาพสัตว์เลี้ยง</h1>
     <p>ชื่อสถานพยาบาล &nbsp; โรงพยาบาลสัตว์มะแอ๊ะ(Ma-ae veterinary Hospital) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ใบอนุญาตสถานพยาบาลสัตว์เลขที่ &nbsp; 1135782566</p>
-    <p>ชื่อ-สกุล</p>
-    <p>เลขที่ใบประกอบวิชาชีพการสัตวแพทย์</p>
-    <p>ทำการตรวจสุขภาพสัตว์เลี้ยงชื่อ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สายพันธุ์  </p>
-    <p>เพศ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; อายุ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปี&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เดือน</p>
+    <p>ชื่อ-สกุล {{$Vet->first_name}} {{$Vet->last_name}}</p>
+    <p>เลขที่ใบประกอบวิชาชีพการสัตวแพทย์ {{$Vet->veterinary_license}}</p>
+    <p>ทำการตรวจสุขภาพสัตว์เลี้ยงชื่อ {{$Pet->pet_name}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สายพันธุ์ {{$Pet->breed}} </p>
+    <p>เพศ {{$Pet->gender}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; อายุ&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ปี&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;เดือน</p>
     <p>หมายเลขไมโครชิพ</p>
     <h1>ผลการตรวจ Physical Examination</h1>
     <div class="result">

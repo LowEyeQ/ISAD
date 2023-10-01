@@ -5,17 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class MediExam extends Model
+class Veterinary extends Model
 {
     use HasFactory;
 
-    protected $table = 'Medi_Exam';
-    protected $primaryKey = 'exam_id';
+    protected $table = 'Veterinary';
+    protected $primaryKey = 'veterinary_id';
     protected $keyType = 'string';
     public $incrementing = true;
 
-    public function pet(){
-        return $this->belongsTo(Pet::class, 'pet_id', 'pet_id');
-    }
 
 }

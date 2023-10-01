@@ -5,7 +5,9 @@ var __webpack_exports__ = {};
   \*************************************/
 document.addEventListener("DOMContentLoaded", function () {
   // รับแถวทั้งหมดในตาราง
-  var rows = document.querySelectorAll("table tr[id]");
+  var rows = document.querySelectorAll("body");
+  document.querySelectorAll("");
+  alert(rows.length);
 
   // เพิ่มตัวตรวจสอบเหตุการณ์คลิกให้กับแต่ละแถว
   rows.forEach(function (row) {

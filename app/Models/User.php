@@ -10,6 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
+
     use HasApiTokens, HasFactory, Notifiable;
     protected $table = 'Users';
     protected $primaryKey = 'user_id';
@@ -48,4 +49,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    
+    public function pets(){
+        return $this->hasMany(Pet::class, 'user_id', 'user_id');
+    }
 }

@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     // รับแถวทั้งหมดในตาราง
-    const rows = document.querySelectorAll("table tr[id]");
+    const rows = document.querySelectorAll("body");
+    document.querySelectorAll("")
+    alert(rows.length);
 
     // เพิ่มตัวตรวจสอบเหตุการณ์คลิกให้กับแต่ละแถว
     rows.forEach(function (row) {
@@ -19,3 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+
+

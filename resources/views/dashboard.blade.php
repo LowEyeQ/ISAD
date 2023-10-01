@@ -5,7 +5,7 @@
 <x-app-layout>
     <x-slot name="header">
         <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg">
-            Toggle Dark Modex
+            Toggle Dark Mode
         </button>
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             <h4 style="background-color:powderblue;">Hello, {{Auth::user()->username}}</h4>
@@ -26,7 +26,7 @@
                                 </thead>
                                 <tbody>
                                     @php($i =1)
-                                    @foreach ( $MediExam as $row )  
+                                    @foreach ($MediExam as $row )
                                     <tr>
                                         <th>{{$i++}}</th>
                                         <td>{{$row->exam_id}}</td>

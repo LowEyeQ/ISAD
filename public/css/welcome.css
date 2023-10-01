@@ -60,17 +60,20 @@
             }
 
             section {
-                min-height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background: #1f242d;
-                font-size: 100px;
-                color: #fff;
+                    padding: 40px;
+
+                    min-height: 100vh;
+                    /*display: flex;*/
+                    justify-content: center;
+                    align-items: center;
+                    background: #ffffff;
+                    font-size: 20px;
+                    color: #050505;
+
             }
 
             section:nth-child(odd) {
-                background: #0ef;
+                background: rgb(22, 64, 107);
             }
 
             .pic_home {
@@ -99,6 +102,7 @@
 
             #home {
                 background-image: url('/storage/background.jpg');
+                width: 100%;
                 background-position: center center;
             }
 
