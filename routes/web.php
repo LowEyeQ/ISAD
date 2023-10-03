@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\DocController;
+use App\Http\Controllers\DashBoardController;
 use App\Http\Controllers\LocationController;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\PdfController;
@@ -45,22 +46,21 @@ Route::get('/paper', [DocController::class, 'createPDF']);
 //     return view('welcome');
 // });
 
-Route::get('/dashboard', function () {
-    $users= User::all();
-    $MediExam=MediExam::all();
-    return view('dashboard', compact("MediExam"));
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('dashboard', [DashboardController::class, 'dashboard'])
+        ->middleware(['auth', 'verified'])
+        ->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/certificate',[DocController::class,'doc']);
+    Route::get('/appointment', [AppointmentController::class, 'index']);
 });
 
 Route::get('/sendmail', [MailController::class, 'notification']);
 
-Route::get('/calendar', [AppointmentController::class, 'index']);
+
 
 Route::post('/', [AppointmentController::class, 'store']);
 

@@ -1,8 +1,0 @@
-//เพิ่มใหม่
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewpoint" content="width=device-width,initial-scale=1">
-    </head>
-</html>

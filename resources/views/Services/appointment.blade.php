@@ -8,8 +8,12 @@
     <style>
         /* CSS สำหรับสไตล์ปฎิทิน */
         body {
+            display: grid;
+            place-items: center; /* จัดให้อยู่ตรงกลางทั้งแนวนอนและแนวดิ่ง */
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
+            height: 100vh; /* ความสูงเท่ากับ viewport คือจอเว็บ */
+            margin: 0;
         }
         .calendar {
             max-width: 1200px;

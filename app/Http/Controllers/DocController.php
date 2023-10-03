@@ -8,7 +8,7 @@ use App\Models\Veterinary;
 use Illuminate\Http\Request;
 use PDF;
 use Illuminate\Support\Facades\Auth;
-
+use \DateTime;
 
 class DocController extends Controller
 {
@@ -40,12 +40,15 @@ class DocController extends Controller
     // }
     function doc(){
         $user = Auth::user();
-        $userPets = $user->pets->pluck('pet_id')->toArray(); // ดึงรหัสของ Pets ของ User ทั้งหมดและเก็บไว้ในรูปของ Array
+        $userPets = $user->pets->pluck('pet_id')->toArray(); // ดึงรหัสของ Pets ของ User ทั้งหมดและเก็บไว้ในรูปของ Array ดึงข้อมูลเฉพาะคอลัมน์เดียวจากตาราง
 
         // ดึงข้อมูล MediExam ของ Pets ของ User
         $certificates = MediExam::whereIn('pet_id', $userPets)->get();
 
-        return view('paper.certificate', compact('certificates'));
+
+
+
+        return view('Services.certificate', compact('certificates'));
     }
 
 
@@ -76,8 +79,17 @@ class DocController extends Controller
             }
         }
 
-        $html = view('pdf_template', compact("Pet", "MediExam", "Vet"));
+        $mediExamDate = new DateTime($MediExam->date);
+        $date_of_birth = new DateTime($Pet->date_of_birth);
+
+        $interval = $mediExamDate->diff($date_of_birth);
+        $age_in_days = $interval->days;
+        $age_in_months = $age_in_days / 30.4;  // ประมาณจำนวนวันในเดือนเฉลี่ย
+
+
+        $html = view('pdf_template', compact("Pet", "MediExam", "Vet", "age_in_months"));
         $pdf = PDF::loadHTML($html); // Load your Blade Template
+
 
         return $pdf->stream(); // Stream the PDF to the browser for viewing or download
     }

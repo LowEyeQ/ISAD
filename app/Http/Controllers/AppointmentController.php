@@ -7,7 +7,7 @@ use App\Models\Appointment;
 class AppointmentController extends Controller
 {
     function index(){
-        return view('calendar');
+        return view('Services.appointment');
     }
 
     public function store(Request $request)
