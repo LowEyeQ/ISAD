@@ -8,7 +8,6 @@
 
         <title>Certificate</title>
 
-
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
@@ -40,17 +39,17 @@
                 <x-application-logo fill="none" width="150" height="150" class="stroke-slate-200" stroke-width="1" stroke-linejoin="round"/>
             </a>
         </div>
+        <!-- <div class="name" style="font-size: 50px; display: flex; align-items: flex-start;">Certificate</div> -->
     <div id="tableData" class=" place-content-center pt-10 px-56">
       <div id="tableData" class="border rounded-lg shadow-md overflow-hidden container mx-auto">
                     <table id="tableData" class="w-full text-center font-light">
                                 <thead class="font-normal  bg-gray-50  dark:bord text-lg er-neutral-500">
 
                                 <tr id="tableData" class="">
-                                    <th scope="col" class="py-2">Exam ID</th>
-                                    <th scope="col" class="py-2">Pet ID</th>
+                                    <th scope="col" class="py-2">Exam No.</th>
                                     <th scope="col" class="py-2">Pet Name</th>
                                     <th scope="col" class="py-2">Date</th>
-                                    <th scope="col" class="py-2">Veterinary ID</th>
+                                    <th scope="col" class="py-2">Veterinary's Name</th>
                                 </tr>
 
 
@@ -60,11 +59,10 @@
                                   @php($i =1)
                                     @foreach ( $certificates as $row )
                                     <tr id="tableData" class="hover:bg-sky-50 hover:cursor-pointer" onclick="goto('{{route('generate-pdf', $row['exam_id'])}}')">
-                                        <td class="py-2">{{$row['exam_id']}}</th>
-                                        <td class="py-2">{{$row['pet_id']}}</td>
+                                        <td class="py-2">{{$i++}}</th>
                                         <td class="py-2">{{$row->pet['pet_name']}}</td>
                                         <td class="py-2">{{$row['date']}}</td>
-                                        <td class="py-2">{{$row['veterinary_id']}}</td>
+                                        <td class="py-2">{{$row['veterinary_id']}} {{$row['last_name']}}</td>
                                     </tr>
                                     @endforeach
 

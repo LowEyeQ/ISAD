@@ -1,0 +1,137 @@
+body {
+    display: grid;
+    place-items: center;
+    /* จัดให้อยู่ตรงกลางทั้งแนวนอนและแนวดิ่ง */
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    height: 100vh;
+    margin: 0;
+}
+
+.name{
+    font-weight: 500;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 50px;
+}
+
+#currentMonth {
+    width: 90%;
+}
+
+.name {
+    text-align: center;
+    margin-top: -10px;
+}
+
+.calendar {
+    max-width: 1500px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 90px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th,
+table td {
+    height: 50px;
+    padding: 10px;
+    text-align: center;
+    /* border: 1px solid #333; */
+}
+
+table th {
+    font-size: 18px;
+    background-color: #333;
+    color: #fff;
+}
+
+table td {
+    background-color: #fff;
+    /* background-color: #f5faf6; */
+}
+
+table td.selected-date {
+    background-color: #131f47;
+    color: #fff;
+}
+
+table td.disabled-time-slot {
+    background-color: #ccc;
+    pointer-events: none;
+}
+
+.bordered-table {
+    display: none;
+}
+
+.bordered-table th,
+.bordered-table td {
+    border: 1px solid #ccc;
+    /* ตั้งค่าเส้นขอบตามที่คุณต้องการ */
+}
+
+.selected {
+    background-color: #131f47;
+    color: #fff;
+}
+
+.input_data {
+    background-color: #161557;
+    width: 1200px;
+    height: 1150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    background: #fff;
+    ;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+form input,
+form textarea {
+    background: #F2F2F2;
+    border: 0;
+    padding: 20px;
+    margin: 10px 0;
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px;
+}
+
+form button {
+    padding: 15px;
+    background: #ff5361;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+.empty-time-slot.selected {
+    background-color: #131f47;
+    color: #fff;
+    pointer-events: auto;
+}
+
+textarea {
+    resize: none;
+}

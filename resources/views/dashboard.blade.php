@@ -5,8 +5,6 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
-            <button id="theme-toggle" class="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-gray-200 px-4 py-2 rounded-lg">
-                Toggle Dark Mode</button>
         </h2>
     </x-slot>
 
@@ -23,19 +21,20 @@
                                             <i class="fa fa-arrow-down text-muted"></i>
                                         </span>
                                     </th>
-                                    <th scope="col" >petname</th>
-                                    <th scope="col" >species</th>
-                                    <th scope="col" >breed</th>
-                                    <th scope="col" >microchip</th>
-                                    <th scope="col" >age</th>
-                                    <th scope="col" >gender</th>
+                                    <th scope="col" >Petname</th>
+
+                                    <th scope="col" >Species</th>
+                                    <th scope="col" >Breed</th>
+                                    <th scope="col" >Microchip</th>
+                                    <th scope="col" >Age(months)</th>
+                                    <th scope="col" >Gender</th>
                                     <th scope="col" >DOB</th>
 
                                 </tr>
                                 </thead>
                                 <tbody>
                                     @php($i =1)
-                                    @foreach ($pets as $row )
+                                    @foreach ($pets as $row)
                                     <tr>
                                         <th>{{$i++}}</th>
                                         <td>{{$row->pet_name}}</td>
@@ -56,7 +55,7 @@
 </x-app-layout>
 
 
-<html lang='en'>
+{{-- <html lang='en'>
   <head>
     <meta charset='utf-8' />
     <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
@@ -75,4 +74,4 @@
   <body>
     <div id='calendar'></div>
   </body>
-</html>
+</html> --}}

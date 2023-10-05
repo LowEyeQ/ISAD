@@ -66,7 +66,7 @@
                 margin-left:50px;
             }
         </style>
-        <script src="{{ mix('js/script.js') }}"></script>
+        <script src="{{ mix('js/pdf.js') }}"></script>
 </head>
 <body>
     <h1>ใบรับรองการตรวจสุขภาพสัตว์เลี้ยง</h1>

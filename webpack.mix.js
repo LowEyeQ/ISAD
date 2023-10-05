@@ -7,11 +7,13 @@ mix.js('resources/js/app.js', 'public/js')
    ]);
 
 mix.css('resources/css/welcome.css', 'public/css');
-mix.css('resources/css/pdf.css', 'public/css');
+mix.css('resources/css/video_appointment.css', 'public/css');
+mix.css('resources/css/appointment.css', 'public/css');
 mix.css('resources/css/certificate.css', 'public/css');
 mix.js('resources/js/certificate.js', 'public/js');
+mix.js('resources/js/welcome.js', 'public/js');
 mix.js('resources/js/pdf.js', 'public/js');
-mix.js('resources/js/script.js', 'public/js');
-
+mix.js('resources/js/appointment.js', 'public/js');
+mix.js('resources/js/video_appointment.js', 'public/js');
 mix.disableNotifications();
 

@@ -41,13 +41,18 @@ class DocController extends Controller
     function doc(){
         $user = Auth::user();
         $userPets = $user->pets->pluck('pet_id')->toArray(); // ดึงรหัสของ Pets ของ User ทั้งหมดและเก็บไว้ในรูปของ Array ดึงข้อมูลเฉพาะคอลัมน์เดียวจากตาราง
+        //w,ji6h
+
+
 
         // ดึงข้อมูล MediExam ของ Pets ของ User
         $certificates = MediExam::whereIn('pet_id', $userPets)->get();
 
 
 
-
+        //w,ji6h
+        $userVeterinary = $user->pets->pluck('pet_id')->toArray();
+        $certificates = Veterinary::whereIn('pet_id', $userPets)->get();
         return view('Services.certificate', compact('certificates'));
     }
 

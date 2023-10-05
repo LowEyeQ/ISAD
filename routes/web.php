@@ -56,6 +56,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/certificate',[DocController::class,'doc']);
     Route::get('/appointment', [AppointmentController::class, 'index']);
+    Route::get('/videocall', function(){
+        return view('Services.appoinment_videocall');
+    });
 });
 
 Route::get('/sendmail', [MailController::class, 'notification']);

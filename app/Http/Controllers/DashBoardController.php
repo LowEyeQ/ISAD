@@ -10,7 +10,7 @@ class DashBoardController extends Controller
     //
     function dashboard(){
         $user = Auth::user();
-        $userPets = $user->pets->pluck('pet_id')->toArray();
+        // $userPets = $user->pets->pluck('pet_id')->toArray();
         $pets = $user->pets;
         return view('dashboard', ['pets' => $pets]);
     }

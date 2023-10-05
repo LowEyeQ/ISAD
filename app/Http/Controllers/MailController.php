@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Mail;
+// use App\Models\Mail;
 use App\Mail\NotificationMail;
+use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
@@ -13,8 +14,7 @@ class MailController extends Controller
   {
     $data = [
       "subject"=>"hello ku k he",
-      "body"=>"Hello friends, Welcome to ชิงร้อยชิงล้าน
-      https://prod.liveshare.vsengsaas.visualstudio.com/join?D2FC471B577727C7B26E407A46457ABE548C"
+      "body"=>"Hello friends, Welcome to ชิงร้อยชิงล้าน"
       ];
     // MailNotify class that is extend from Mailable class.
     try

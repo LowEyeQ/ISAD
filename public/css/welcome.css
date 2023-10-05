@@ -72,6 +72,17 @@
 
             }
 
+            #service {
+                padding: 150px;
+                min-height: 56vh;
+                justify-content: center;
+                align-items: center;
+                background: rgb(22, 64, 107);
+                font-size: 20px;
+                color: #050505;
+
+        }
+
             #contact {
                 padding: 40px;
 
@@ -104,37 +115,53 @@
                 display: none;
             }
 
+            .service-wrapper{
 
-
-
-            #service #delivery {
-                position: relative;
-                padding-top: 1%;
-                width: 20%;
-                height: 100%;
-                margin-top: 30px;
-                margin-bottom: 30px;
-                background-color: white;
-                display: flex;
-                justify-content: center;
-                transition: 0.3s;
-
-            }
-
-            #service #delivery:hover {
                 width: 25%;
-                height: 25%;
-
+                height: 400px;
+                position: relative;
+                overflow: hidden;
+                background-color: white;
+                border-radius: 5px;
+                box-shadow: 0px 0px 20px #000000b8;
             }
 
-            #service #delivery .text {
-                opacity: 0;
-                transition: 1s;
+
+            .img-wrapper {
+                border-radius: 10px ;
+                width: 80%;
+                height: 70%;
+                overflow: hidden;
             }
 
-            #service #delivery .text:hover {
-                opacity: 1;
+            #videocall .img-wrapper .image{
+                position: relative;
+                right: 90%;
+                transition: 0.3s;
             }
+
+            .img-wrapper .image:hover {
+                cursor: pointer;
+                filter: blur(1px) brightness(0.4);
+                transform: scale(1.2);
+            }
+
+            .detail-wrapper {
+                width: 80%;
+                text-align: center;
+                height: 20%;
+                position: absolute;
+                bottom: 0px;
+                box-shadow: 0px 0px 20px #000000b8;
+                background: linear-gradient(13deg, rgba(12,56,158,0.7987570028011204) 31%, rgba(0,104,255,0.47102591036414565) 100%);
+            }
+
+            .detail-wrapper h1 {
+                color: #ffffff;
+                position: relative;
+                top: 25%;
+            }
+
             .sub {
                 padding-bottom: 15px;
             }
@@ -193,4 +220,27 @@
             .slider-nav a:hover {
                 opacity: 1;
             }
+            .dark {
+                background-color: #333; /* ตัวอย่างสีพื้นหลังสำหรับ Dark Mode */
+                color: #fff; /* ตัวอย่างสีข้อความสำหรับ Dark Mode */
+            }
+
+            .styled-text {
+                border: 2px solid #3498db;
+                padding: 20px;
+                background-color: #f2f2f2;
+                border-radius: 10px;
+                width: 300px;
+                text-align: center;
+                box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+                font-family: Arial, sans-serif;
+                /* background-color: aliceblue;
+                border: dotted 4px cadetblue;
+                width: 200px;
+                height: 40px;
+                text-align: center; */
+                padding: 0.25em 0.5em;
+                color: #494949;
+                border-left: solid 5px #7db4e6;
+              }
 

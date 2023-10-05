@@ -5,16 +5,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+{{-- <link href="{{ asset('css/dark-mode.css') }}" rel="stylesheet" id="dark-mode-stylesheet"> --}}
 
     <meta charset="utf-8">
     <title> Ma-ae Veterinary Hospital </title>
     <link rel="stylesheet" href="{{ mix('css/welcome.css') }}">
-    <script src="{{ mix('js/script.js') }}"></script>
+    <script src="{{ mix('js/welcome.js') }}"></script>
 </head>
 
-<body>
+    <body >
 
     <header>
+        {{-- <div>
+            <!-- Dark Mode Toggle Button -->
+            <button id="theme-toggle" class="px-4 py-2 rounded-lg">
+                Toggle Dark Mode
+            </button>
+        </div> --}}
+
         <a href="/">
             <x-application-logo width="100" height="100" fill="none" stroke="white" stroke-width="3" stroke-linejoin="round"/>
         </a>
@@ -23,9 +31,9 @@
             <a href="/main" class="active menu-items">Home</a>
             <ul class="dropdown">
                 <a href="#service" class="menu-items">Service</a>
-                <ul class="submenu"style="line-height:28px">
-                    <li><a href="#" class="sub">Veterinary Delivery</a></li>
-                    <li><a href="#" class="sub">Video Call</a></li>
+                <ul class="submenu"style="line-height:40px">
+                    <!-- <li><a href="#" class="sub">Veterinary Delivery</a></li> -->
+                    <li><a href="/videocall" class="sub">Video Call</a></li>
                     <li><a href="/appointment" class="sub">Appointment</a></li>
                     <li><a href="/certificate" class="sub">Certificate</a></li>
                 </ul>
@@ -53,22 +61,49 @@
                 <a href="#slide-4"></a>
         </div>
     </section>
-    <section id="service">
-            <h2>Service</h2>
-            <div id="delivery">
-                <x-delivery-icon class="icon" width="100"/>
-                <h3 class="text">Veterinary Delivery</h3>
+
+
+
+    <section id="service" >
+            <h2 style="color: rgb(255, 255, 255); font-size: 80px; padding-left: 75px; padding-top: 1px; padding-bottom: 20px;">Service</h2>
+
+
+            <div id="videocall" class="service-wrapper">
+
+                <div class="img-wrapper">
+
+                    <img class="image" width="230%" src="https://supplychainguru.co.th/wp-content/uploads/2021/06/young-asia-businessman-using-laptop-talk-colleagues-about-plan-video-call-meeting-while-work-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus-prevention-min-scaled.jpg" alt="Oh no!">
+
+                </div>
+
+                <div class="detail-wrapper">
+                    <h1 class="text">Video Call</h1>
+                </div>
+
             </div>
 
-            <h3>Veterinary Delivery</h3>
-            <h5 style="margin-left: 300px; margin-right: 150px;">เป็นฟังก์ชันที่คุณสามารถนัดแพทย์ไปรักษาสัตว์เลี้ยงตามที่อยู่อาศัยของคุณ ฟังก์ชันใหม่นี้เป็นฟังก์ชันไว้เพื่อสำหรับคนที่ไม่สามารถพาไปโรงพยาบาลสัตว์ได้เอง เช่น การเคลื่อนสัตว์ที่ลำบาก หรือ คุณไม่มีเวลาพาไปโรงพยาบาลสัตว์โดยตรง</h5>
-            <h4 style="margin-left: 420px; color: red"">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4>
-            <h3>Appointment</h3>
-            <h5 style="margin-left: 300px; margin-right: 150px;">เป็นฟังก์ชันที่คุณสามารถนัดแพทย์ไปรักษาสัตว์เลี้ยงตามที่อยู่อาศัยของคุณ ฟังก์ชันใหม่นี้เป็นฟังก์ชันไว้เพื่อสำหรับคนที่ไม่สามารถพาไปโรงพยาบาลสัตว์ได้เอง เช่น การเคลื่อนสัตว์ที่ลำบาก หรือ คุณไม่มีเวลาพาไปโรงพยาบาลสัตว์โดยตรง</h5>
-            <h4 style="margin-left: 420px; color: red"">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4>
-            <h3>Appointment</h3>
-            <h5 style="margin-left: 300px; margin-right: 150px;">เป็นฟังก์ชันที่คุณสามารถนัดแพทย์ไปรักษาสัตว์เลี้ยงตามที่อยู่อาศัยของคุณ ฟังก์ชันใหม่นี้เป็นฟังก์ชันไว้เพื่อสำหรับคนที่ไม่สามารถพาไปโรงพยาบาลสัตว์ได้เอง เช่น การเคลื่อนสัตว์ที่ลำบาก หรือ คุณไม่มีเวลาพาไปโรงพยาบาลสัตว์โดยตรง</h5>
-            <h4 style="margin-left: 420px; color: red"">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4></section>
+            <div class="styled-text" style="margin-left: -5px; margin-top: 30px;">
+            <h3 style="color: rgb(12, 39, 145)">Video Call</h3>
+            </div>
+            <div class="styled-text" style="margin-left: 495px; margin-top: -40px;">
+            <h3 style="color: rgb(12, 39, 145">Appointment</h3>
+            </div>
+            <div class="styled-text" style="margin-left: 995px; margin-top: -40px;">
+            <h3 style="color: rgb(12, 39, 145)">Certificate</h3>
+            </div>
+
+            <h5 style=" margin-right: 150px; margin-left: -5px; color: white; margin-top: 30px;">เป็นฟังก์ชันที่ทำให้เจ้าของสัตว์เลี้ยง<br>สามารถติดต่อกับสัตวแพทย์ออนไลน์<br>ผ่านวิดีโอการสนทนา เพื่อรับคำแนะนำ<br>และการรักษาเบื้องต้นในรูปแบบออนไลน์ </h5>
+            <h4 style=" margin-right: 150px; color: red ; margin-top: 30px;">[หมายเหตุ ฟังก์ชันนี้มีการชำระค่าบริการ]</h4>
+
+            <h5 style="margin-left: 500px; margin-right: 150px; margin-top: -140px; color: white"> เป็นฟังก์ชันที่ทำให้เจ้าของสัตว์เลี้ยง<br>สามารถขอเอกสารเพื่อรับรองสุขภาพ<br>สัตว์เลี้ยงสะดวกยิ่งขึ้น โดยที่ไม่จำเป็น<br>ต้องเดินทางมาขอหรือติดต่อกับโรงพยาบาล<br> เช่น การไปต่างประเทศแล้วมีเหตุจำเป็น<br>ที่จะต้องใช้ใบรับรองการตรวจสุขภาพ</h5>
+            <!-- <h4 style="margin-left: 420px; color: red">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4> -->
+
+            <h5 style="margin-left: 1000px; margin-right: -120px; margin-top: -140px; color: white"> เป็นฟังก์ชันเพื่อบริการลูกค้า<br>ให้สะดวกยิ่งขึ้นในด้านของ<br>ลำดับการใช้บริการโรง<br>พยาบาลสัตว์ โดยในฟังก์ชันนี้มีทั้งการจองนัดหมายล่วงหน้า<br>และการยกเลิกการนัดหมาย </h5>
+            <!-- <h4 style="margin-left: 420px; color: red">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4> -->
+
+    </section>
+
+
     <section id="about">
         <h1 style="color: rgb(12, 39, 145); font-size: 80px; padding-left: 75px; padding-top: 50px; padding-bottom: 20px;">About</h1>
         <img src="https://i.pinimg.com/564x/fe/a9/bb/fea9bbe8c5bd39e12f89bfd8d018ef12.jpg"  style="width:25%; border-radius: 700px; float: left; margin-right: 80px; margin-bottom: 20px;">
@@ -106,7 +141,6 @@
         {{-- <img src="/storage/profile face hospital.png"  style="width:35%; border-radius: 700px; float: left; margin-left: 900px; margin-top: -250px;"> --}}
     </section>
 
-    <script src="{{ asset('js/script.js') }}"></script>
-</body>
 
+</body>
 </html>
