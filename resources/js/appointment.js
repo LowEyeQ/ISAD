@@ -2,6 +2,7 @@ const emptyTimeSlots = document.querySelectorAll('.empty-time-slot');
 const timeTable = document.querySelector('.bordered-table');
 let selectedDateCell = null; // เพิ่มตัวแปรเพื่อตรวจสอบว่ามีวันที่ถูกเลือกหรือไม่
 
+
 function showSuccessAlert() {
     // แสดงข้อความแจ้งเตือนเมื่อ Submit สำเร็จ
     alert('บันทึกข้อมูลเรียบร้อยแล้ว');
@@ -93,3 +94,4 @@ nextMonthButton.addEventListener('click', () => {
 });
 
 updateCalendar();
+

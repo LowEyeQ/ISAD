@@ -40,5 +40,22 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+var imageWrappers = document.querySelectorAll(".img-wrapper");
+var textOverlays = document.querySelectorAll(".text-overlay");
+imageWrappers.forEach(function (wrapper, currentIndex, listObj) {
+  wrapper.addEventListener("mouseenter", function () {
+    wrapper.style.cursor = "pointer";
+    console.log("movein");
+    wrapper.getElementsByClassName("image")[0].style.filter = "blur(1px) brightness(0.4)";
+    wrapper.getElementsByClassName("image")[0].style.transform = "scale(1.2)";
+    wrapper.getElementsByClassName("text-overlay")[0].style.opacity = 1;
+  });
+  wrapper.addEventListener("mouseleave", function () {
+    console.log("moveout");
+    wrapper.getElementsByClassName("text-overlay")[0].style.opacity = 0;
+    wrapper.getElementsByClassName("image")[0].style.filter = "none";
+    wrapper.getElementsByClassName("image")[0].style.transform = "scale(1)";
+  });
+});
 /******/ })()
 ;

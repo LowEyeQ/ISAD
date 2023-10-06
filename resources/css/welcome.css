@@ -85,7 +85,7 @@
 
             #contact {
                 padding: 40px;
-
+                overflow: hidden;
                 min-height: 56vh;
                 /*display: flex;*/
                 justify-content: center;
@@ -115,6 +115,15 @@
                 display: none;
             }
 
+
+            #service {
+                display: inline-block;
+            }
+
+            #howToSection {
+                display: inline-block;
+            }
+
             .service-wrapper{
 
                 width: 25%;
@@ -128,26 +137,27 @@
 
 
             .img-wrapper {
-                border-radius: 10px ;
-                width: 80%;
-                height: 70%;
+                width: 100%;
+                height:80%;
                 overflow: hidden;
+            }
+
+            .image {
+                transition: 0.3s;
             }
 
             #videocall .img-wrapper .image{
                 position: relative;
                 right: 90%;
-                transition: 0.3s;
             }
 
-            .img-wrapper .image:hover {
-                cursor: pointer;
-                filter: blur(1px) brightness(0.4);
-                transform: scale(1.2);
+            .img-wrapper .detail {
+                position: absolute;
+                bottom: 100px;
             }
 
             .detail-wrapper {
-                width: 80%;
+                width: 100%;
                 text-align: center;
                 height: 20%;
                 position: absolute;
@@ -242,3 +252,22 @@
                 color: #494949;
                 border-left: solid 5px #7db4e6;
               }
+
+            .container {
+                position: relative;
+                width: 300px; /* ปรับขนาดตามที่คุณต้องการ */
+            }
+
+            .text-overlay {
+                position: absolute;
+                top: 20%;
+                font-family: 'Kanit', sans-serif;
+                left: 50%;
+                width: 100%;
+                vertical-align: top;
+                font-size: medium;
+                padding: 10%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition:  opacity 0.3s ease;
+            }

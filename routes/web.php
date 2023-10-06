@@ -54,18 +54,19 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::get('/certificate',[DocController::class,'doc']);
-    Route::get('/appointment', [AppointmentController::class, 'index']);
+    Route::get('/certificate',[DocController::class,'doc'])->name('certificate');
+    Route::get('/appointment', [AppointmentController::class, 'index'])->name('appointment.index');
+    Route::post('/appointment', [AppointmentController::class, 'store'])->name('appointment.store');
     Route::get('/videocall', function(){
         return view('Services.appoinment_videocall');
-    });
+    })->name('videocall');
 });
 
 Route::get('/sendmail', [MailController::class, 'notification']);
 
 
 
-Route::post('/', [AppointmentController::class, 'store']);
+
 
 
 Route::post('/export_pdf', [PdfController::class, 'export_pdf'])->name('export_pdf');

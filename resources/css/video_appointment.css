@@ -33,10 +33,16 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+.day-header {
+    width: 14.28%; /* 100% หารด้วย 7 คอลัมน์ = 14.28% */
+    text-align: center; /* กำหนดให้ข้อความอยู่ตรงกลางในแต่ละคอลัมน์ */
+}
+
 table {
     margin-top: 20px;
     width: 100%;
     border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 table th,
@@ -86,10 +92,17 @@ table td.disabled-time-slot {
 .input_data {
     background-color: #161557;
     width: 1200px;
-    height: 1150px;
+    height: 2500px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    /* background-image: url('/storage/payment.jpg');
+    width: 100%;
+    background-position: center center; */
+
+
 }
 
 form {

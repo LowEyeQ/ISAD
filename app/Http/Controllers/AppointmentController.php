@@ -1,13 +1,17 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Pet;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Appointment;
 class AppointmentController extends Controller
 {
     function index(){
-        return view('Services.appoinment');
+        $user = auth()->user();
+    // ดึงรายการสัตว์เลี้ยงของผู้ใช้
+    $userPets = Pet::where('user_id', $user->user_id)->get();
+        return view('Services.appointment', ['userPets' => $userPets]);
     }
 
     public function store(Request $request)
@@ -19,20 +23,40 @@ class AppointmentController extends Controller
 
         // สร้าง appointment_id ใหม่
         $newAppointmentId = str_pad((int)$lastAppointmentId + 1, 20, '0', STR_PAD_LEFT);
-
-        $pet_id =$request->input('pet_id');
+        $pet_id = $request->input('pet_selection'); // เปลี่ยนจาก 'pet_id' เป็น 'pet_selection'
         $appointment_date = $request->input('appointment_date');
         $appointment_time = $request->input('appointment_time');
         $reason = $request->input('reason');
-        $inset = Appointment ::insert(['pet_id' => $pet_id,
-        'appointment_date' => $appointment_date ,
-        'appointment_time' => $appointment_time,
-        'reason' => $reason,
-        'appointment_id' => $newAppointmentId
 
-    ]);
+        // บันทึกข้อมูลลงในตาราง Appointment
+        $inserted = Appointment::create([
+            'appointment_id' => $newAppointmentId,
+            'pet_id' => $pet_id,
+            'appointment_date' => $appointment_date,
+            'appointment_time' => $appointment_time,
+            'reason' => $reason,
+        ]);
+    //     $pet_id =$request->input('pet_id');
+    //     $appointment_date = $request->input('appointment_date');
+    //     $appointment_time = $request->input('appointment_time');
+    //     $reason = $request->input('reason');
+    //     $inset = Appointment ::insert(['pet_id' => $pet_id,
+    //     'appointment_date' => $appointment_date ,
+    //     'appointment_time' => $appointment_time,
+    //     'reason' => $reason,
+    //     'appointment_id' => $newAppointmentId
+
+    // ]);
 
 
-        return redirect('calendar')->with('success', 'บันทึกข้อมูลเรียบร้อยแล้ว');
+    return redirect()->route('appointment.index'); // ส่งข้อความ success ไปยังหน้าก่อนหน้า;
+
     }
+
+
+
+
+
+
+
 }

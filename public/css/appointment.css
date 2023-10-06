@@ -13,15 +13,11 @@ body {
     text-align: center;
     font-size: 50px;
     margin-bottom: 50px;
+    margin-top: -10px;
 }
 
 #currentMonth {
     width: 90%;
-}
-
-.name {
-    text-align: center;
-    margin-top: -10px;
 }
 
 .calendar {
@@ -31,6 +27,11 @@ body {
     padding: 90px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.day-header {
+    width: 14.28%; /* 100% หารด้วย 7 คอลัมน์ = 14.28% */
+    text-align: center; /* กำหนดให้ข้อความอยู่ตรงกลางในแต่ละคอลัมน์ */
 }
 
 table {
@@ -49,17 +50,17 @@ table td {
 
 table th {
     font-size: 18px;
-    background-color: #333;
+    background-color: #023032;
     color: #fff;
 }
 
 table td {
-    background-color: #fff;
+    background-color: #e4f7f2;
     /* background-color: #f5faf6; */
 }
 
 table td.selected-date {
-    background-color: #131f47;
+    background-color: #023032;
     color: #fff;
 }
 
@@ -84,14 +85,30 @@ table td.disabled-time-slot {
 }
 
 .input_data {
-    background-color: #161557;
+    background-color: #043d40;
     width: 1200px;
-    height: 1150px;
+    height: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.input_data select {
+    border: 0;
+    padding: 20px;
+    margin: 10px 0;
+    outline: none;
+    font-size: 16px;
+    border-radius: 30px;
+    /* padding: 2vw 4vw; */
+    /* border: none; */
+    flex-direction: column;
+    background-color: #F2F2F2; /* Background color for the select */
+    color: #161557; /* Text color for the select */
+    /* border-radius: 5px; */
+    /* width: 90%; */
+    /* max-width: 600px;  */
+  }
 form {
     background: #fff;
     ;

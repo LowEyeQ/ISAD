@@ -15,5 +15,7 @@ mix.js('resources/js/welcome.js', 'public/js');
 mix.js('resources/js/pdf.js', 'public/js');
 mix.js('resources/js/appointment.js', 'public/js');
 mix.js('resources/js/video_appointment.js', 'public/js');
+// mix.copyDirectory('public/storage', 'public/dist/storage');
+
 mix.disableNotifications();
 

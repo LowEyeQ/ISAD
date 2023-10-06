@@ -2,6 +2,8 @@
 let sections = document.querySelectorAll('section');
 let navLinks = document.querySelectorAll('header nav a');
 
+
+
 window.onscroll = () => {
     sections.forEach(sec => {
         let top = window.scrollY;
@@ -37,3 +39,31 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
     });
+
+
+let imageWrappers = document.querySelectorAll(".img-wrapper");
+const textOverlays = document.querySelectorAll(".text-overlay");
+
+
+
+
+imageWrappers.forEach(function(wrapper, currentIndex, listObj) {
+    wrapper.addEventListener("mouseenter", () => {
+        wrapper.style.cursor = "pointer";
+        console.log("movein");
+        wrapper.getElementsByClassName("image")[0].style.filter = "blur(1px) brightness(0.4)";
+        wrapper.getElementsByClassName("image")[0].style.transform = "scale(1.2)";
+        wrapper.getElementsByClassName("text-overlay")[0].style.opacity = 1 ;
+    });
+
+    wrapper.addEventListener("mouseleave", () => {
+        console.log("moveout");
+        wrapper.getElementsByClassName("text-overlay")[0].style.opacity = 0 ;
+        wrapper.getElementsByClassName("image")[0].style.filter = "none";
+        wrapper.getElementsByClassName("image")[0].style.transform = "scale(1)";
+    });
+
+
+});
+
+

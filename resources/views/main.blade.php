@@ -2,6 +2,7 @@
 <html>
 
 <head>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
@@ -10,7 +11,9 @@
     <meta charset="utf-8">
     <title> Ma-ae Veterinary Hospital </title>
     <link rel="stylesheet" href="{{ mix('css/welcome.css') }}">
-    <script src="{{ mix('js/welcome.js') }}"></script>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap');
+</style>
 </head>
 
     <body >
@@ -68,38 +71,79 @@
             <h2 style="color: rgb(255, 255, 255); font-size: 80px; padding-left: 75px; padding-top: 1px; padding-bottom: 20px;">Service</h2>
 
 
-            <div id="videocall" class="service-wrapper">
-
+            <div id="videocall" class="service-wrapper"style="margin-left: 5px">
+                <a href="{{route('videocall')}}">
                 <div class="img-wrapper">
 
-                    <img class="image" width="230%" src="https://supplychainguru.co.th/wp-content/uploads/2021/06/young-asia-businessman-using-laptop-talk-colleagues-about-plan-video-call-meeting-while-work-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus-prevention-min-scaled.jpg" alt="Oh no!">
+                        <img class="image" width="250%" src="https://supplychainguru.co.th/wp-content/uploads/2021/06/young-asia-businessman-using-laptop-talk-colleagues-about-plan-video-call-meeting-while-work-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus-prevention-min-scaled.jpg" alt="Oh no!">
 
+                    <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">ติดต่อกับสัตวแพทย์ออนไลน์ผ่านวิดีโอการสนทนา (Google meet) <br> รับคำแนะนำและการรักษาเบื้องต้นในรูปแบบออนไลน์</div>
                 </div>
-
+                </a>
                 <div class="detail-wrapper">
                     <h1 class="text">Video Call</h1>
+                </div><small></small>
+
+            </div>
+
+            <div id="appointment" class="service-wrapper" style="margin-left: 435px; margin-top: -400px;">
+                <a href="{{route('appointment.index')}}">
+                    <div class="img-wrapper">
+                        <img class="image" width="230%" src="https://previews.123rf.com/images/kchung/kchung1408/kchung140801555/30903156-appointment-word-circle-marked-on-a-calendar-by-a-red-pen.jpg" alt="image">
+                        <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">จองนัดหมายกับสัตวแพทย์ล่วงหน้า</div>
+                    </div>
+                </a>
+                <div class="detail-wrapper">
+                    <h1 class="text">Appointment</h1>
                 </div>
 
             </div>
 
-            <div class="styled-text" style="margin-left: -5px; margin-top: 30px;">
+            <div id="certificate" class="service-wrapper" style="margin-left: 870px; margin-top: -400px;">
+
+                <a href="{{route('certificate')}}">
+                    <div class="img-wrapper">
+                        <img class="image" width="120%" style="position: absolute; right:-30px" src="https://i.pinimg.com/564x/74/3b/17/743b17fe5f7fe261d0dce4baa41c47fe.jpg" alt="Oh no!">
+                        <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">สร้างใบรับรองออนไลน์ได้แบบอัตโนมัติ</div>
+                    </div>
+                </a>
+                <div class="detail-wrapper">
+                    <h1 class="text">Certificate</h1>
+                </div>
+
+            </div>
+
+
+
+            <div class="styled-text" style="margin-left: 0%; margin-top: 30px;">
             <h3 style="color: rgb(12, 39, 145)">Video Call</h3>
             </div>
-            <div class="styled-text" style="margin-left: 495px; margin-top: -40px;">
+            <div class="styled-text" style="margin-left: 37%; margin-top: -40px;">
             <h3 style="color: rgb(12, 39, 145">Appointment</h3>
             </div>
-            <div class="styled-text" style="margin-left: 995px; margin-top: -40px;">
+            <div class="styled-text" style="margin-left: 74%; margin-top: -40px;">
             <h3 style="color: rgb(12, 39, 145)">Certificate</h3>
             </div>
 
-            <h5 style=" margin-right: 150px; margin-left: -5px; color: white; margin-top: 30px;">เป็นฟังก์ชันที่ทำให้เจ้าของสัตว์เลี้ยง<br>สามารถติดต่อกับสัตวแพทย์ออนไลน์<br>ผ่านวิดีโอการสนทนา เพื่อรับคำแนะนำ<br>และการรักษาเบื้องต้นในรูปแบบออนไลน์ </h5>
-            <h4 style=" margin-right: 150px; color: red ; margin-top: 30px;">[หมายเหตุ ฟังก์ชันนี้มีการชำระค่าบริการ]</h4>
+            <h5 style=" margin-right: 850px; margin-left: -5px; color: white; margin-top: 30px;"></h5>
 
-            <h5 style="margin-left: 500px; margin-right: 150px; margin-top: -140px; color: white"> เป็นฟังก์ชันที่ทำให้เจ้าของสัตว์เลี้ยง<br>สามารถขอเอกสารเพื่อรับรองสุขภาพ<br>สัตว์เลี้ยงสะดวกยิ่งขึ้น โดยที่ไม่จำเป็น<br>ต้องเดินทางมาขอหรือติดต่อกับโรงพยาบาล<br> เช่น การไปต่างประเทศแล้วมีเหตุจำเป็น<br>ที่จะต้องใช้ใบรับรองการตรวจสุขภาพ</h5>
+            <h3 style="color: white; margin-top: 30px;">วิธีใช้งาน</h3>
+            <br><p style="color: white; margin-right: 830px;">1. ต้อง log in ก่อนใช้งาน<br>2. เลือกวันที่จากปฏิทิน<br>3. เลือกเวลาจากตารางเวลา<br>4. กรอกรายละเอียดต่างๆ<br>5. ชำระเงินค่าบริการ<br>6. รอแจ้งเตือนเกี่ยวกับรายละเอียดต่างๆที่อีเมล<br>7. เข้าห้องสนทนาตามเวลาที่กำหนด<br>8. ถ้ามีข้อสงสัยหรือต้องการแจ้งปัญหา สามารถติดต่อได้ที่ Contact ด้านล่างของเว็ปไซต์</p></h5>
+            <h4 style=" margin-left: -30px; margin-right: 150px; color: rgb(255, 155, 155) ; margin-top: 30px;">[หมายเหตุ ฟังก์ชันนี้มีการชำระค่าบริการ]</h4>
+
+
+
+            <h5 style="margin-left: 420px; margin-right: -120px; margin-top: -20px; color: white"></h5>
+            <br>
+            <h3 style=" color: rgb(227, 255, 236) ; margin-left: 450px; margin-top: -400px;">วิธีใช้งาน</h3>
+            <br><p style=" color: rgb(227, 255, 236); margin-left: 450px; margin-right:400px;" >1. ต้อง log in ก่อนใช้งาน<br>2. เลือกวันที่จากปฏิทิน<br>3. กรอกรายละเอียดต่างๆ<br>4. รอแจ้งเตือนเกี่ยวกับรายละเอียดต่างๆที่อีเมล<br>5. ไปโรงพยาบาลตามวันเวลาที่นัดหมาย<br>6. แจ้งพนักงานตามที่นัดหมายไว้<br>7. ถ้ามีข้อสงสัยหรือต้องการแจ้งปัญหา<br>สามารถติดต่อได้ที่ Contact ด้านล่างของเว็ปไซต์</p></h5>
             <!-- <h4 style="margin-left: 420px; color: red">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4> -->
 
-            <h5 style="margin-left: 1000px; margin-right: -120px; margin-top: -140px; color: white"> เป็นฟังก์ชันเพื่อบริการลูกค้า<br>ให้สะดวกยิ่งขึ้นในด้านของ<br>ลำดับการใช้บริการโรง<br>พยาบาลสัตว์ โดยในฟังก์ชันนี้มีทั้งการจองนัดหมายล่วงหน้า<br>และการยกเลิกการนัดหมาย </h5>
-            <!-- <h4 style="margin-left: 420px; color: red">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4> -->
+            <br>
+            <!-- <h5 style="margin-left: 850px; margin-top: -320px; color: white"> เป็นฟังก์ชันที่ทำให้เจ้าของสัตว์เลี้ยง<br>สามารถขอเอกสารเพื่อรับรองสุขภาพ<br>สัตว์เลี้ยงสะดวกยิ่งขึ้น โดยที่ไม่จำเป็น<br>ต้องเดินทางมาขอหรือติดต่อกับโรงพยาบาล<br> เช่น การไปต่างประเทศแล้วมีเหตุจำเป็น<br>ที่จะต้องใช้ใบรับรองการตรวจสุขภาพ</h5> -->
+            <h3 style=" color: rgb(255, 235, 244) ; margin-left: 900px; margin-top: -380px;">วิธีใช้งาน</h3>
+            <br><p style=" color: rgb(255, 235, 244) ; margin-left: 900px; margin-right:-50px;">1. ต้อง log in ก่อนใช้งาน<br>2. เลือกสัตว์เลี้ยงที่ต้องการ พร้อมกับครั้งที่ตรวจสุขภาพ สำหรับออกเอกสารใบรับรองสุขภาพ ณ ครั้งนั้น<br>3. สามารถดาวน์โหลด หรือ พิมพ์เอกสารได้<br>4. ถ้ามีข้อสงสัยหรือต้องการแจ้งปัญหา<br>สามารถติดต่อได้ที่ Contact ด้านล่างของเว็ปไซต์</p></h5>
+            <h4 style="margin-left: 450px; color: rgb(255, 155, 155); margin-left: 900px; margin-top: 40px;">[หมายเหตุ ฟังก์ชันนี้สำหรับสัตว์ที่เคยตรวจสุขภาพเท่านั้น]</h4>
 
     </section>
 
@@ -141,6 +185,6 @@
         {{-- <img src="/storage/profile face hospital.png"  style="width:35%; border-radius: 700px; float: left; margin-left: 900px; margin-top: -250px;"> --}}
     </section>
 
-
+    <script  src="{{ mix('js/welcome.js') }}"></script>
 </body>
 </html>

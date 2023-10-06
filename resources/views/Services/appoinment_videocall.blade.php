@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,13 +21,13 @@
         <table>
             <thead>
                 <tr>
-                    <th>SUNDAY</th>
-                    <th>MONDAY</th>
-                    <th>TUESDAY</th>
-                    <th>WEDNESDAY</th>
-                    <th>THURSDAY</th>
-                    <th>FRIDAY</th>
-                    <th>SATURNDAY</th>
+                    <th class="day-header">SUNDAY</th>
+                    <th class="day-header">MONDAY</th>
+                    <th class="day-header">TUESDAY</th>
+                    <th class="day-header">WEDNESDAY</th>
+                    <th class="day-header">THURSDAY</th>
+                    <th class="day-header">FRIDAY</th>
+                    <th class="day-header">SATURNDAY</th>
                 </tr>
             </thead>
             <tbody>
@@ -32,7 +35,7 @@
             </tbody>
         </table>
         <div style="height: 30px;"></div>
-        <h3>เลือกช่วงเวลาที่คุณต้องการใช้บริการ</h3>
+        <!-- <h3>เลือกช่วงเวลาที่คุณต้องการใช้บริการ</h3> -->
         <table class="bordered-table">
             <thead>
                 <tr>
@@ -60,21 +63,31 @@
             </tbody>
         </table>
 
-        <div style="height: 20px;"></div>
+        <div style="height: 30px;"></div>
 
         <div class="input_data">
             <form action="/" method="post" onsubmit="return showSuccessAlert()">
 
                 @csrf <!-- ใส่คำสั่ง CSRF สำหรับ Laravel -->
+
+                <!-- รูปใหญ่เเก้ในcssเอา-->
+                <img src="{{ asset('storage/payment.jpg') }}" alt="Your Image">
+
+
+
                 <h1>กรุณากรอกรายละเอียด</h1>
-                <input type="text" id="pet_id" name="pet_id" placeholder="Your pet's name" required>
-                <input type="text" id="appointment_date" name="appointment_date" placeholder="ํYour selected date (auto fill)" required readonly>
-                <input type="text" id="appointment_time_start" name="appointment_time_start" placeholder="ํYour selected time start (auto fill)" required readonly>
-                <input type="text" id="appointment_time_end" name="appointment_time_end"placeholder="ํYour selected time end (auto fill)" required readonly>
-                <textarea id="reason" name="reason" rows="4" placeholder="How can we help you?" required></textarea>
+                <!-- <input type="text" id="pet_id" name="pet_id" placeholder="ชื่อYour pet's name" required> -->
+                <input type="text" id="first_name" name="Sender's firstname" placeholder="ชื่อจริงผู้ชำระเงิน (Sender's firstname)" required>
+                <input type="text" id="last_name" name="Sender's lastname" placeholder="นามสกุลผู้ชำระเงิน (Sender's lastname)" required>
+
+                <input type="text" id="appointment_date" name="appointment_date" placeholder="ํวันที่นัดจอง (Your selected date : auto fill)" required readonly>
+                <input type="text" id="appointment_time_start" name="appointment_time_start" placeholder="ํเวลาเริ่มการสนทนา (Your selected time start : auto fill)" required readonly>
+                <input type="text" id="appointment_time_end" name="appointment_time_end"placeholder="ํเวลาสิ้นสุดการสนทนา (Your selected time end : auto fill)" required readonly>
+                <textarea id="reason" name="reason" rows="4" placeholder="รายละเอียดเพิ่มเติม (How can we help you?)" required></textarea>
+                <input type="text" id="payment_id" name="payment_id" placeholder="ค่าบริการที่ต้องชำระ (Service Fee) : 100.00 บาท" required readonly>
                 <input type="text" id="veterinary_id" name="veterinary_id" placeholder="แพทย์ผู้ให้บริการ : น.สพ.ณัฐวุฒิ ธีระวิทย์" required readonly>
 
-                <h3 style="color: red;">กรุณาอ่านรายละเอียดดังต่อไปนี้</h3>
+                <h3 style="color: red;">กรุณาอ่านรายละเอียดดังต่อไปนี้ก่อนทำการยืนยัน</h3>
                 <h4 style="color: red;">1.หากคุณลูกค้าไม่เข้าห้องสนทนาภายในเวลา 15 นาทีนับจากเวลานัดหมายที่จองไว้ ทางเราขอสงวนสิทธิ์ข้ามคิวของคุณลูกค้าโดยไม่มีการคืนค่าบริการที่ชำระมาครับ/ค่ะ</h4>
                 <h4 style="color: red;">2.ขอความกรุณาเข้าห้องสนทนาตามเวลาที่นัดจองไว้เท่านั้นครับ/ค่ะ</h4>
                 <button type="submit">Submit</button>
