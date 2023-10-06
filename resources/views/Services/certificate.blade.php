@@ -62,7 +62,7 @@
                                         <td class="py-2">{{$i++}}</th>
                                         <td class="py-2">{{$row->pet['pet_name']}}</td>
                                         <td class="py-2">{{$row['date']}}</td>
-                                        <td class="py-2">{{$row['veterinary_id']}} {{$row['last_name']}}</td>
+                                        <td class="py-2">{{$row->vet['first_name']}} {{$row->vet['last_name']}}</td>
                                     </tr>
                                     @endforeach
 

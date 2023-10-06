@@ -13,6 +13,4 @@ class Veterinary extends Model
     protected $primaryKey = 'veterinary_id';
     protected $keyType = 'string';
     public $incrementing = true;
-
-
 }

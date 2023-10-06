@@ -18,4 +18,7 @@ class MediExam extends Model
         return $this->belongsTo(Pet::class, 'pet_id', 'pet_id');
     }
 
+    public function vet(){
+        return $this->belongsTo(Veterinary::class, 'veterinary_id', 'veterinary_id');
+    }
 }
