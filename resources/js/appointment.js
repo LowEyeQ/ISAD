@@ -3,12 +3,6 @@ const timeTable = document.querySelector('.bordered-table');
 let selectedDateCell = null; // เพิ่มตัวแปรเพื่อตรวจสอบว่ามีวันที่ถูกเลือกหรือไม่
 
 
-function showSuccessAlert() {
-    // แสดงข้อความแจ้งเตือนเมื่อ Submit สำเร็จ
-    alert('บันทึกข้อมูลเรียบร้อยแล้ว');
-    return true; // ให้ฟอร์มดำเนินการ Submit ต่อ
-}
-
 // JavaScript สำหรับการสร้างปฎิทิน
 const tableBody = document.querySelector('tbody');
 const currentMonthElement = document.getElementById('currentMonth');
@@ -82,6 +76,8 @@ function updateCalendar() {
         }
     }
 }
+
+
 
 prevMonthButton.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);

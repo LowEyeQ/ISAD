@@ -92,7 +92,7 @@ table td.disabled-time-slot {
 .input_data {
     background-color: #161557;
     width: 1200px;
-    height: 2500px;
+    height: 2000px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -107,7 +107,6 @@ table td.disabled-time-slot {
 
 form {
     background: #fff;
-    ;
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;

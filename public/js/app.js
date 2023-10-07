@@ -9681,10 +9681,10 @@ const isThenable = (thing) =>
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/js/app": 0,
+/******/ 			"css/welcome": 0,
 /******/ 			"css/certificate": 0,
 /******/ 			"css/appointment": 0,
 /******/ 			"css/video_appointment": 0,
-/******/ 			"css/welcome": 0,
 /******/ 			"css/app": 0
 /******/ 		};
 /******/ 		
@@ -9735,12 +9735,12 @@ const isThenable = (thing) =>
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["css/certificate","css/appointment","css/video_appointment","css/welcome","css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["css/certificate","css/appointment","css/video_appointment","css/welcome","css/app"], () => (__webpack_require__("./resources/css/app.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/certificate","css/appointment","css/video_appointment","css/welcome","css/app"], () => (__webpack_require__("./resources/css/welcome.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/certificate","css/appointment","css/video_appointment","css/welcome","css/app"], () => (__webpack_require__("./resources/css/video_appointment.css")))
-/******/ 	__webpack_require__.O(undefined, ["css/certificate","css/appointment","css/video_appointment","css/welcome","css/app"], () => (__webpack_require__("./resources/css/appointment.css")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/certificate","css/appointment","css/video_appointment","css/welcome","css/app"], () => (__webpack_require__("./resources/css/certificate.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/welcome","css/certificate","css/appointment","css/video_appointment","css/app"], () => (__webpack_require__("./resources/js/app.js")))
+/******/ 	__webpack_require__.O(undefined, ["css/welcome","css/certificate","css/appointment","css/video_appointment","css/app"], () => (__webpack_require__("./resources/css/app.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/welcome","css/certificate","css/appointment","css/video_appointment","css/app"], () => (__webpack_require__("./resources/css/welcome.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/welcome","css/certificate","css/appointment","css/video_appointment","css/app"], () => (__webpack_require__("./resources/css/video_appointment.css")))
+/******/ 	__webpack_require__.O(undefined, ["css/welcome","css/certificate","css/appointment","css/video_appointment","css/app"], () => (__webpack_require__("./resources/css/appointment.css")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/welcome","css/certificate","css/appointment","css/video_appointment","css/app"], () => (__webpack_require__("./resources/css/certificate.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

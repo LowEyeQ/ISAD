@@ -1,5 +1,5 @@
 <x-guest-layout>
-    <form method="POST" action="{{ route('register') }}">
+    <form method="POST" action="{{ route('register') }}" onsubmit="return showSuccessAlert()">
         @csrf
 
         <!-- Username -->
@@ -18,6 +18,7 @@
         </div>
     </div>
 
+
     <div class="sm:col-span-3">
         <x-input-label for="lastname" :value="__('Last Name')" />
         <div class="mt-1">
@@ -25,7 +26,7 @@
         </div>
     </div>
 </div>
-        
+
         <!-- gender and phone number -->
         <div class="mt-4 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
             <div class="sm:col-span-2">
@@ -40,14 +41,14 @@
             <div class="sm:col-span-4">
                 <x-input-label for="phonenumber" :value="__('Phone Number')" />
             <div class="mt-1">
-                <input type="text" name="phonenumber" id="phonenumber" maxlength="12" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>  
-                
+                <input type="text" name="phonenumber" id="phonenumber" maxlength="12" class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"/>
+
             </div>
             </div>
         </div>
 
           <div class="mt-4">
-            
+
           </div>
 
         <!-- Email Address -->
@@ -85,9 +86,23 @@
                 {{ __('Already registered?') }}
             </a>
 
-            <x-primary-button class="ml-4">
+            <x-primary-button type="submit" class="ml-4">
                 {{ __('Register') }}
             </x-primary-button>
         </div>
     </form>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        function showSuccessAlert() {
+            // Display a SweetAlert2 success message
+            Swal.fire({
+                icon: 'success',
+                title: 'Registration successful!',
+                showConfirmButton: false,
+                timer: 5000 // Adjust the duration as needed
+            });
+            return true; // Allow the form to be submitted
+        }
+    </script>
 </x-guest-layout>

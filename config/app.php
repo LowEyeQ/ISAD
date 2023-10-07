@@ -171,6 +171,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
+        ArielMejiaDev\LarapexCharts\LarapexChartsServiceProvider::class,
     ])->toArray(),
 
     /*

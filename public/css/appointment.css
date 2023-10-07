@@ -87,7 +87,7 @@ table td.disabled-time-slot {
 .input_data {
     background-color: #043d40;
     width: 1200px;
-    height: 1000px;
+    height: 1200px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -146,10 +146,11 @@ form button {
 .empty-time-slot.selected {
     background-color: #131f47;
     color: #fff;
-    pointer-events: auto;
 }
 
 textarea {
     resize: none;
 }
+
+
 

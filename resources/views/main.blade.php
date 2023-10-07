@@ -48,7 +48,21 @@
         </nav>
     </header>
 
-    <section id="home" style="padding: 0;">
+
+    <section id="name">
+        <div class="word" style="margin-top: 110px;">
+            <span style="border: 5px solid #000;">M</span>
+            <span>A</span>
+            <span>-</span>
+            <span>A</span>
+            <span>E</span>
+            <h1>Hospital</h1>
+        </div>
+    </section>
+
+
+
+    <section id="home" style="padding: 0; background-color:white">
         <!--<div class="pic_home"></div>-->
         <div class = "slider-wrapper">
             <div class="slider">
@@ -72,45 +86,39 @@
 
 
             <div id="videocall" class="service-wrapper"style="margin-left: 5px">
-                <a href="{{route('videocall')}}">
+                <a href="{{route('videocall.index')}}">
                 <div class="img-wrapper">
-
                         <img class="image" width="250%" src="https://supplychainguru.co.th/wp-content/uploads/2021/06/young-asia-businessman-using-laptop-talk-colleagues-about-plan-video-call-meeting-while-work-from-home-living-room-self-isolation-social-distancing-quarantine-corona-virus-prevention-min-scaled.jpg" alt="Oh no!">
-
-                    <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">ติดต่อกับสัตวแพทย์ออนไลน์ผ่านวิดีโอการสนทนา (Google meet) <br> รับคำแนะนำและการรักษาเบื้องต้นในรูปแบบออนไลน์</div>
+                    <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255); margin-top: 25px;">ติดต่อกับสัตวแพทย์ออนไลน์ผ่านวิดีโอการสนทนา<br> (Google meet) <br> รับคำแนะนำและการรักษาเบื้องต้นในรูปแบบออนไลน์</div>
                 </div>
                 </a>
-                <div class="detail-wrapper">
+                <div class="detail-wrapper" >
                     <h1 class="text">Video Call</h1>
                 </div><small></small>
-
             </div>
 
-            <div id="appointment" class="service-wrapper" style="margin-left: 435px; margin-top: -400px;">
+            <div id="appointment" class="service-wrapper" style="margin-left: 450px; margin-top: -400px;">
                 <a href="{{route('appointment.index')}}">
                     <div class="img-wrapper">
-                        <img class="image" width="230%" src="https://previews.123rf.com/images/kchung/kchung1408/kchung140801555/30903156-appointment-word-circle-marked-on-a-calendar-by-a-red-pen.jpg" alt="image">
-                        <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">จองนัดหมายกับสัตวแพทย์ล่วงหน้า</div>
+                        <img class="image" width="230%" src="https://previews.123rf.com/images/kchung/kchung1408/kchung140801555/30903156-appointment-word-circle-marked-on-a-calendar-by-a-red-pen.jpg" alt="Oh no!">
+                        <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">จองนัดหมายกับสัตวแพทย์ล่วงหน้า ช่วยประหยัดเวลาของคุณ</div>
                     </div>
                 </a>
                 <div class="detail-wrapper">
                     <h1 class="text">Appointment</h1>
                 </div>
-
             </div>
 
-            <div id="certificate" class="service-wrapper" style="margin-left: 870px; margin-top: -400px;">
-
+            <div id="certificate" class="service-wrapper" style="margin-left: 900px; margin-top: -400px;">
                 <a href="{{route('certificate')}}">
                     <div class="img-wrapper">
-                        <img class="image" width="120%" style="position: absolute; right:-30px" src="https://i.pinimg.com/564x/74/3b/17/743b17fe5f7fe261d0dce4baa41c47fe.jpg" alt="Oh no!">
-                        <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">สร้างใบรับรองออนไลน์ได้แบบอัตโนมัติ</div>
+                        <img class="image" width="135%" style="position: relative; left:-53px" src="https://i.pinimg.com/564x/74/3b/17/743b17fe5f7fe261d0dce4baa41c47fe.jpg" alt="Oh no!">
+                        <div class="text-overlay" id="textOverlay" style="color: rgb(255, 255, 255)">สร้างใบรับรองออนไลน์ได้แบบอัตโนมัติ รับรองสุขภาพสัตว์เลี้ยงของคุณ</div>
                     </div>
                 </a>
                 <div class="detail-wrapper">
                     <h1 class="text">Certificate</h1>
                 </div>
-
             </div>
 
 
@@ -125,30 +133,24 @@
             <h3 style="color: rgb(12, 39, 145)">Certificate</h3>
             </div>
 
-            <h5 style=" margin-right: 850px; margin-left: -5px; color: white; margin-top: 30px;"></h5>
 
-            <h3 style="color: white; margin-top: 30px;">วิธีใช้งาน</h3>
-            <br><p style="color: white; margin-right: 830px;">1. ต้อง log in ก่อนใช้งาน<br>2. เลือกวันที่จากปฏิทิน<br>3. เลือกเวลาจากตารางเวลา<br>4. กรอกรายละเอียดต่างๆ<br>5. ชำระเงินค่าบริการ<br>6. รอแจ้งเตือนเกี่ยวกับรายละเอียดต่างๆที่อีเมล<br>7. เข้าห้องสนทนาตามเวลาที่กำหนด<br>8. ถ้ามีข้อสงสัยหรือต้องการแจ้งปัญหา สามารถติดต่อได้ที่ Contact ด้านล่างของเว็ปไซต์</p></h5>
-            <h4 style=" margin-left: -30px; margin-right: 150px; color: rgb(255, 155, 155) ; margin-top: 30px;">[หมายเหตุ ฟังก์ชันนี้มีการชำระค่าบริการ]</h4>
-
-
-
-            <h5 style="margin-left: 420px; margin-right: -120px; margin-top: -20px; color: white"></h5>
+            <h3 style="color: white; margin-top: 30px; margin-top: 50px; text-decoration: underline; text-shadow: 3px 2px rgb(28, 12, 120);">วิธีใช้งาน</h3>
+            <br><p style="color: white; margin-right: 830px;">1. ต้อง log in ก่อนใช้งาน<br>2. เลือกวันที่จากปฏิทิน<br>3. เลือกเวลาจากตารางเวลา<br>4. กรอกรายละเอียดต่างๆ<br>5. ชำระเงินค่าบริการ<br>6. รอแจ้งเตือนเกี่ยวกับรายละเอียดต่างๆที่อีเมล<br>7. เข้าห้องสนทนาตามเวลาที่กำหนด</p></h5>
+            <h4 style=" margin-left: -30px; margin-right: 150px; color: rgb(255, 155, 155); text-shadow: 3px 2px rgb(28, 12, 120); margin-top: 30px;">[หมายเหตุ ฟังก์ชันนี้มีการชำระค่าบริการ]</h4>
             <br>
-            <h3 style=" color: rgb(227, 255, 236) ; margin-left: 450px; margin-top: -400px;">วิธีใช้งาน</h3>
-            <br><p style=" color: rgb(227, 255, 236); margin-left: 450px; margin-right:400px;" >1. ต้อง log in ก่อนใช้งาน<br>2. เลือกวันที่จากปฏิทิน<br>3. กรอกรายละเอียดต่างๆ<br>4. รอแจ้งเตือนเกี่ยวกับรายละเอียดต่างๆที่อีเมล<br>5. ไปโรงพยาบาลตามวันเวลาที่นัดหมาย<br>6. แจ้งพนักงานตามที่นัดหมายไว้<br>7. ถ้ามีข้อสงสัยหรือต้องการแจ้งปัญหา<br>สามารถติดต่อได้ที่ Contact ด้านล่างของเว็ปไซต์</p></h5>
-            <!-- <h4 style="margin-left: 420px; color: red">[หมายเหตุ ฟังก์ชันนี้สำหรับการรักษาสัตว์ที่มีอาการไม่สาหัส]</h4> -->
-
+            <h3 style=" color: rgb(227, 255, 236) ; margin-left: 450px; margin-top: -325px; text-decoration: underline; text-shadow: 3px 2px rgb(28, 12, 120);">วิธีใช้งาน</h3>
+            <br><p style=" color: rgb(227, 255, 236); margin-left: 450px; margin-right:400px;" >1. ต้อง log in ก่อนใช้งาน<br>2. เลือกวันที่จากปฏิทิน<br>3. กรอกรายละเอียดต่างๆ<br>4. รอแจ้งเตือนเกี่ยวกับรายละเอียดต่างๆที่อีเมล<br>5. ไปโรงพยาบาลตามวันเวลาที่นัดหมาย<br>6. แจ้งพนักงานตามที่นัดหมายไว้</p></h5>
             <br>
-            <!-- <h5 style="margin-left: 850px; margin-top: -320px; color: white"> เป็นฟังก์ชันที่ทำให้เจ้าของสัตว์เลี้ยง<br>สามารถขอเอกสารเพื่อรับรองสุขภาพ<br>สัตว์เลี้ยงสะดวกยิ่งขึ้น โดยที่ไม่จำเป็น<br>ต้องเดินทางมาขอหรือติดต่อกับโรงพยาบาล<br> เช่น การไปต่างประเทศแล้วมีเหตุจำเป็น<br>ที่จะต้องใช้ใบรับรองการตรวจสุขภาพ</h5> -->
-            <h3 style=" color: rgb(255, 235, 244) ; margin-left: 900px; margin-top: -380px;">วิธีใช้งาน</h3>
-            <br><p style=" color: rgb(255, 235, 244) ; margin-left: 900px; margin-right:-50px;">1. ต้อง log in ก่อนใช้งาน<br>2. เลือกสัตว์เลี้ยงที่ต้องการ พร้อมกับครั้งที่ตรวจสุขภาพ สำหรับออกเอกสารใบรับรองสุขภาพ ณ ครั้งนั้น<br>3. สามารถดาวน์โหลด หรือ พิมพ์เอกสารได้<br>4. ถ้ามีข้อสงสัยหรือต้องการแจ้งปัญหา<br>สามารถติดต่อได้ที่ Contact ด้านล่างของเว็ปไซต์</p></h5>
-            <h4 style="margin-left: 450px; color: rgb(255, 155, 155); margin-left: 900px; margin-top: 40px;">[หมายเหตุ ฟังก์ชันนี้สำหรับสัตว์ที่เคยตรวจสุขภาพเท่านั้น]</h4>
+            <h3 style=" color: rgb(255, 235, 244) ; margin-left: 900px; margin-top: -275px; text-decoration: underline; text-shadow: 3px 2px rgb(28, 12, 120);">วิธีใช้งาน</h3>
+            <br><p style=" color: rgb(255, 235, 244) ; margin-left: 900px; margin-right:-50px;">1. ต้อง log in ก่อนใช้งาน<br>2. เลือกสัตว์เลี้ยงที่ต้องการ พร้อมกับครั้งที่ตรวจสุขภาพ สำหรับออกเอกสารใบรับรองสุขภาพ ณ ครั้งนั้น<br>3. สามารถดาวน์โหลด หรือ พิมพ์เอกสารได้</p></h5>
+            <h4 style="margin-left: 450px; color: rgb(255, 155, 155); text-shadow: 3px 2px rgb(28, 12, 120); margin-left: 900px; margin-top: 40px;">[หมายเหตุ ฟังก์ชันนี้สำหรับสัตว์ที่เคยตรวจสุขภาพเท่านั้น]</h4>
+
+            <h4 style="color: rgb(176, 228, 254); text-shadow: 3px 2px rgb(28, 12, 120); margin-left: 100px; margin-top: 70px;"> >>> ถ้ามีข้อสงสัยหรือต้องการแจ้งปัญหาสามารถติดต่อได้ที่ Contact ด้านล่างของเว็ปไซต์ <<< </h4>
 
     </section>
 
 
-    <section id="about">
+    <section id="about" style="padding: 0; background-color:white">
         <h1 style="color: rgb(12, 39, 145); font-size: 80px; padding-left: 75px; padding-top: 50px; padding-bottom: 20px;">About</h1>
         <img src="https://i.pinimg.com/564x/fe/a9/bb/fea9bbe8c5bd39e12f89bfd8d018ef12.jpg"  style="width:25%; border-radius: 700px; float: left; margin-right: 80px; margin-bottom: 20px;">
         <h6 style="color: rgb(0, 0, 0); font-size: 20px; padding-top: 130px; padding-bottom: 20px;">เกี่ยวกับโรงพยาบาลสัตว์มะแอ๊ะ: "การให้บริการดูแลสุขภาพสัตว์และการปกป้องสัตว์ที่คุณรัก"</h6>
@@ -161,7 +163,7 @@
 
     <section id="contact" style="height: 50px;">
     <h1 style="color: rgb(249, 249, 249); font-size: 50px; padding-top: 5px; padding-bottom: 3px; text-align: center;">Contact</h1>
-        <h2 style="color: rgb(255, 255, 255); font-size: 20px; padding-top: 8px; padding-bottom: 10px;"><< โรงพยาบาลสัตว์มะแอ๊ะ | MA-AE Hospital >></h2>
+        <h2 style="color: rgb(255, 255, 255); font-size: 20px; padding-top: 8px; padding-bottom: 10px; ; text-shadow: 3px 2px rgb(28, 12, 120);"><< โรงพยาบาลสัตว์มะแอ๊ะ | MA-AE Hospital >></h2>
         <div class="contact-info">
             <p style="color: rgb(255, 255, 255); font-size: 18px; padding-top: 5px; padding-bottom: 5px;"><strong>ที่ตั้ง:</strong> เลขที่ 1 ซอยฉลองกรุง 1 แขวงลาดกระบัง เขตลาดกระบัง กรุงเทพมหานคร 10520</p>
             <p style="color: rgb(255, 255, 255); font-size: 18px; padding-top: 5px; padding-bottom: 5px;"><strong>เบอร์โทรศัพท์:</strong> 062-552-4841</p>

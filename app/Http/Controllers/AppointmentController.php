@@ -11,7 +11,10 @@ class AppointmentController extends Controller
         $user = auth()->user();
     // ดึงรายการสัตว์เลี้ยงของผู้ใช้
     $userPets = Pet::where('user_id', $user->user_id)->get();
-        return view('Services.appointment', ['userPets' => $userPets]);
+
+        return view('Services.appointment', [
+        'userPets' => $userPets,
+        ]);
     }
 
     public function store(Request $request)
@@ -36,27 +39,11 @@ class AppointmentController extends Controller
             'appointment_time' => $appointment_time,
             'reason' => $reason,
         ]);
-    //     $pet_id =$request->input('pet_id');
-    //     $appointment_date = $request->input('appointment_date');
-    //     $appointment_time = $request->input('appointment_time');
-    //     $reason = $request->input('reason');
-    //     $inset = Appointment ::insert(['pet_id' => $pet_id,
-    //     'appointment_date' => $appointment_date ,
-    //     'appointment_time' => $appointment_time,
-    //     'reason' => $reason,
-    //     'appointment_id' => $newAppointmentId
 
-    // ]);
 
 
     return redirect()->route('appointment.index'); // ส่งข้อความ success ไปยังหน้าก่อนหน้า;
 
     }
-
-
-
-
-
-
 
 }

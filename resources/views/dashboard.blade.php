@@ -11,7 +11,7 @@
     <div class="py-12">
             <div class="container">
                 <div class="row">
-                    <table class="table table-hover table-bordered">
+                    <table class="table table-dark table-striped table-bordered">
                                 <thead>
                                 <tr>
                                     <th scope="col" >

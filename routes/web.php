@@ -9,11 +9,13 @@ use Illuminate\Support\Facades\Mail;
 use App\Http\Controllers\MailController;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\DocController;
+use App\Http\Controllers\VideoAppointController;
 use App\Http\Controllers\DashBoardController;
 use App\Http\Controllers\LocationController;
 use Illuminate\Support\Facades\Storage;
 use App\Http\Controllers\PdfController;
-
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\AppointmentController;
 use Barryvdh\DomPDF\Facade as PDFFacade;
 
@@ -42,9 +44,7 @@ Route::get('/main',[MainController::class,'index']);
 
 Route::get('/paper', [DocController::class, 'createPDF']);
 
-// Route::get('/', function () { //เอาของ laravel ออก
-//     return view('welcome');
-// });
+
 
 Route::get('dashboard', [DashboardController::class, 'dashboard'])
         ->middleware(['auth', 'verified'])
@@ -56,26 +56,18 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/certificate',[DocController::class,'doc'])->name('certificate');
     Route::get('/appointment', [AppointmentController::class, 'index'])->name('appointment.index');
-    Route::post('/appointment', [AppointmentController::class, 'store'])->name('appointment.store');
-    Route::get('/videocall', function(){
-        return view('Services.appoinment_videocall');
-    })->name('videocall');
+    Route::post('/appointment', [AppointmentController::class, 'store'])->name('appointment');
+    Route::get('/videocall', [VideoAppointController::class, 'index'])->name('videocall.index');
+    Route::post('/videocall', [VideoAppointController::class, 'store'])->name('videocall');
 });
 
 Route::get('/sendmail', [MailController::class, 'notification']);
 
-
-
-
-
-
 Route::post('/export_pdf', [PdfController::class, 'export_pdf'])->name('export_pdf');
 
+Route::get('/appointments-chart', [ChartController::class, 'index']);
 
 Route::get('/generate-pdf/{exam_id}', [DocController::class, 'createPDF'])->name('generate-pdf') ;
-// Route::get('/fonts/NotoSerifThai-VariableFont_wdth,wght.ttf', function ($filename) {
-//     $font = Storage::disk('local')->get("fonts/$filename");
-//     return response($font, 200)->header('Content-Type', 'font/ttf');
-// })->where('filename', '.*\.ttf');
+
 require __DIR__.'/auth.php';
 

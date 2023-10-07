@@ -57,5 +57,19 @@ imageWrappers.forEach(function (wrapper, currentIndex, listObj) {
     wrapper.getElementsByClassName("image")[0].style.transform = "scale(1)";
   });
 });
+var spans = document.querySelectorAll('.word span');
+spans.forEach(function (span, idx) {
+  span.addEventListener('click', function (e) {
+    e.target.classList.add('active');
+  });
+  span.addEventListener('animationend', function (e) {
+    e.target.classList.remove('active');
+  });
+
+  // Initial animation
+  setTimeout(function () {
+    span.classList.add('active');
+  }, 750 * (idx + 1));
+});
 /******/ })()
 ;

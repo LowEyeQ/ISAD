@@ -104,66 +104,7 @@ function toggleSelectedDate(cell) {
     }
 }
 
-// function toggleSelectedDate(cell) {
-//     const cellData = cell.textContent.trim(); // ดึงข้อมูลจากเซลล์และตัดช่องว่างหน้าและหลังออก
-//     if (/^\d+$/.test(cellData)) { // ตรวจสอบว่าเป็นตัวเลขหรือไม่
-//         if (cell === selectedDateCell) {
-//             // ถ้าคลิกที่เซลล์วันที่เดียวกันอีกครั้งให้ยกเลิกการเลือก
-//             cell.classList.remove('selected-date');
-//             selectedDateCell = null;
 
-//             // ยกเลิกการเลือกช่วงเวลาที่เลือกไว้ก่อนหน้านี้
-//             if (selectedTimeSlot) {
-//                 const selectedTimeSlotCell = document.querySelector(`.bordered-table th:contains('${selectedTimeSlot}')`);
-//                 if (selectedTimeSlotCell) {
-//                     selectedTimeSlotCell.classList.remove('selected');
-//                     selectedTimeSlot = null;
-//                 }
-//             }
-
-//             // ล้างค่าในช่อง "date"
-//             document.getElementById('appointment_date').value = '';
-
-//             // ยกเลิกค่าในช่อง "appointment_time_start" และ "appointment_time_end"
-//             document.getElementById('appointment_time_start').value = '';
-//             document.getElementById('appointment_time_end').value = '';
-//         } else {
-//             // ถอดเลือกเซลล์วันที่ก่อนหน้า (หากมี)
-//             if (selectedDateCell) {
-//                 selectedDateCell.classList.remove('selected-date');
-//             }
-
-//             // เลือกเซลล์วันที่ใหม่
-//             selectedDateCell = cell;
-//             selectedDateCell.classList.add('selected-date');
-
-//             // อัพเดตค่าในช่อง "date" ให้เป็นวันที่ที่เลือก
-//             const selectedYear = currentDate.getFullYear();
-//             const selectedMonth = currentDate.getMonth() + 1;
-//             const selectedDay = cell.textContent;
-//             const formattedDate = `${selectedYear}-${selectedMonth.toString().padStart(2, '0')}-${selectedDay.toString().padStart(2, '0')}`;
-//             document.getElementById('appointment_date').value = formattedDate;
-
-//             // ยกเลิกค่าในช่อง "appointment_time_start" และ "appointment_time_end"
-//             document.getElementById('appointment_time_start').value = '';
-//             document.getElementById('appointment_time_end').value = '';
-//         }
-//     }
-// }
-
-
-// ฟังก์ชันเลือกเวลา
-// function toggleSelected(cell) {
-//     const selectedCells = document.querySelectorAll('.selected');
-//     if (selectedCells.length === 0) {
-//       cell.classList.add('selected');
-//     } else {
-//       selectedCells.forEach(selectedCell => {
-//         selectedCell.classList.remove('selected');
-//       });
-//       cell.classList.add('selected');
-//     }
-// }
 function toggleSelected(cell) {
     const selectedCells = document.querySelectorAll('.selected');
     if (selectedCells.length === 0) {
