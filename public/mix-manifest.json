@@ -5,9 +5,10 @@
     "/js/pdf.js": "/js/pdf.js",
     "/js/appointment.js": "/js/appointment.js",
     "/js/video_appointment.js": "/js/video_appointment.js",
-    "/css/certificate.css": "/css/certificate.css",
+    "/css/welcome.css": "/css/welcome.css",
     "/css/appointment.css": "/css/appointment.css",
     "/css/video_appointment.css": "/css/video_appointment.css",
-    "/css/welcome.css": "/css/welcome.css",
-    "/css/app.css": "/css/app.css"
+    "/css/notify.css": "/css/notify.css",
+    "/css/app.css": "/css/app.css",
+    "/css/certificate.css": "/css/certificate.css"
 }

@@ -2,7 +2,6 @@
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-
     <!-- Include any necessary CSS/JS assets here -->
 </head>
 <body>
@@ -13,4 +12,3 @@
     {!! $chart->script() !!}
 </body>
 </html>
-

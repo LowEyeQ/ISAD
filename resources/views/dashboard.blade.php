@@ -8,6 +8,10 @@
         </h2>
     </x-slot>
 
+    <h4 style="text-align: center;
+                font-family: Arial, sans-serif;
+                color: rgb(12, 39, 145)
+                margin-right: 200px">ข้อมูลสัตว์เลี้ยง</h4>
     <div class="py-12">
             <div class="container">
                 <div class="row">
@@ -50,6 +54,62 @@
                             </table>
                         </div>
                     </div>
+
+
+                    {{-- <div class="py-12">
+                        <div class="container">
+                            <div class="row">
+                                <table class="table table-dark table-striped table-bordered">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col" >
+                                                    No.
+                                                    <span>
+                                                        <i class="fa fa-arrow-up"></i>
+                                                        <i class="fa fa-arrow-down text-muted"></i>
+                                                    </span>
+                                                </th>
+                                                <th scope="col" >Petname</th>
+
+                                                <th scope="col" >Species</th>
+                                                <th scope="col" >Breed</th>
+                                                <th scope="col" >Microchip</th>
+                                                <th scope="col" >Age(months)</th>
+                                                <th scope="col" >Gender</th>
+                                                <th scope="col" >DOB</th> --}}
+
+                                            {{-- </tr>
+                                            </thead>
+                                            <tbody>
+                                                @php($i =1)
+                                                @foreach ($pets as $row)
+                                                <tr>
+                                                    <th>{{$i++}}</th>
+                                                    <td>{{$row->pet_name}}</td>
+                                                    <td>{{$row->species}}</td>
+                                                    <td>{{$row->breed}}</td>
+                                                    <td>{{$row->microchip}}</td>
+                                                    <td>{{$row->age}}</td>
+                                                    <td>{{$row->gender}}</td>
+                                                    <td>{{$row->date_of_birth}}</td>
+                                                </tr>
+                                                @endforeach
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div> --}}
+
+
+                    <div style="display: flex; justify-content: center;">
+                      <a href="{{route('main')}}" style="j">
+                      <x-primary-button class="ml-3">
+                        {{ __('กลับสู่หน้าหลัก') }}
+                      </x-primary-button>
+                      </a>
+
+                    </div>
+
+
                 </div>
 
 </x-app-layout>

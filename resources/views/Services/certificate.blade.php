@@ -36,7 +36,7 @@
             <div class="pt-10">
 
         <a href="/main" class="flex justify-center ">
-                <x-application-logo fill="none" width="150" height="150" class="stroke-slate-200" stroke-width="1" stroke-linejoin="round"/>
+                <x-application-logo fill="none" width="150" height="150" class="stroke-slate-500" stroke-width="1" stroke-linejoin="round"/>
             </a>
         </div>
         <!-- <div class="name" style="font-size: 50px; display: flex; align-items: flex-start;">Certificate</div> -->

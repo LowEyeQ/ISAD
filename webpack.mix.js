@@ -5,7 +5,6 @@ mix.js('resources/js/app.js', 'public/js')
       require('postcss-import'),
       require('tailwindcss'),
    ]);
-
 mix.css('resources/css/welcome.css', 'public/css');
 mix.css('resources/css/video_appointment.css', 'public/css');
 mix.css('resources/css/appointment.css', 'public/css');

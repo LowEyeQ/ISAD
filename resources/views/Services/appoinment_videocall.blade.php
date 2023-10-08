@@ -5,9 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ mix('css/video_appointment.css') }}">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     <title>Videocall</title>
 </head>
 <body>
+
+    <div id="daily-bar-chart">
+        {!! $chart->container() !!}
+    </div>
+    {!! $chart->script() !!}
+</body>
+</html>
+
+<a href="/" class="logo-link">
+    <x-application-logo width="80" height="80" fill="none" stroke="#c9c9c9" stroke-width="1"
+        stroke-linejoin="round" />
+</a>
     <div class="calendar">
         <div class="name">Video Call Appointment Calendar</div>
         <div>
@@ -63,35 +76,33 @@
         <div style="height: 30px;"></div>
 
         <div class="input_data">
-            <form action="{{ route('videocall') }}" method="post" onsubmit="return showSuccessAlert()">
+            <form action="{{ route('videocall') }}" method="post" onsubmit="return showSuccessAlert()" enctype="multipart/form-data">
 
                 @csrf <!-- ใส่คำสั่ง CSRF สำหรับ Laravel -->
 
                 <h1>กรุณากรอกรายละเอียด</h1>
                 <!-- <input type="text" id="pet_id" name="pet_id" placeholder="ชื่อYour pet's name" required> -->
-                <input type="text" id="first_name" name="Sender's firstname" placeholder="ชื่อจริงผู้ชำระเงิน (Sender's firstname)" required>
-                <input type="text" id="last_name" name="Sender's lastname" placeholder="นามสกุลผู้ชำระเงิน (Sender's lastname)" required>
+                <!-- <input type="text" id="first_name" name="Sender's firstname" placeholder="ชื่อจริงผู้ชำระเงิน (Sender's firstname)" required>
+                <input type="text" id="last_name" name="Sender's lastname" placeholder="นามสกุลผู้ชำระเงิน (Sender's lastname)" required> -->
 
-                <input type="text" id="appointment_date" name="appointment_date" placeholder="ํวันที่นัดจอง (Your selected date : auto fill)" required readonly>
-                <input type="text" id="appointment_time_start" name="appointment_time_start" placeholder="ํเวลาเริ่มการสนทนา (Your selected time start : auto fill)" required readonly>
-                <input type="text" id="appointment_time_end" name="appointment_time_end"placeholder="ํเวลาสิ้นสุดการสนทนา (Your selected time end : auto fill)" required readonly>
+                <input type="text" id="appointment_date" name="appointment_date" placeholder="ํวันที่นัดจอง (Appointment date : auto fill)" required readonly>
+                <input type="text" id="appointment_time_start" name="appointment_time_start" placeholder="ํเวลาเริ่มการสนทนา (Appointment time start : auto fill)" required readonly>
+                <input type="text" id="appointment_time_end" name="appointment_time_end"placeholder="ํเวลาสิ้นสุดการสนทนา (Appointment time end : auto fill)" required readonly>
 
-                <input type="text" id="payment_id" name="payment_id" placeholder="ค่าบริการที่ต้องชำระ (Service Fee) : 100.00 บาท" readonly style="background-color: #fff">
+                <!-- {{-- <input type="text" id="payment_id" name="payment_id" placeholder="ค่าบริการที่ต้องชำระ (Service Fee) : 100.00 บาท" readonly style="background-color: #fff"> --}} -->
+                <textarea id="reason" name="reason" rows="4" placeholder="รายละเอียดเพิ่มเติมที่ต้องการแจ้งไว้ (How can we help you?)"></textarea>
                 <input type="text" id="veterinary_id" name="veterinary_id" placeholder="แพทย์ผู้ให้บริการ(Veterinary) : น.สพ.ณัฐวุฒิ ธีระวิทย์(หมอโอ๊ค)" readonly style="background-color: #fff">
-                <h3 style="color: red;">กรุณาอ่านรายละเอียดดังต่อไปนี้ก่อนไปยังขั้นตอนต่อไป</h3>
+                <h3 style="color: red;">กรุณาอ่านรายละเอียดดังต่อไปนี้ก่อนทำการยืนยัน</h3>
                 <h4 style="color: red;">1.ขอความกรุณาเข้าห้องสนทนาตามเวลาที่นัดจองไว้เท่านั้นครับ/ค่ะ</h4>
-                <h4 style="color: red;">2.หากคุณลูกค้าไม่เข้าห้องสนทนาภายในเวลา 15 นาทีนับจากเวลานัดหมายที่จองไว้ ทางเราขอสงวนสิทธิ์ข้ามคิวของคุณลูกค้าโดยไม่มีการคืนค่าบริการที่ชำระมาครับ/ค่ะ</h4>
-                <h3 style="color: red;">**เมื่อชำระเงินแล้ว จะไม่สามารถทำการยกเลิกการนัดจองได้</h3>
-                <!-- <button type="submit">Submit</button> -->
+                <h4 style="color: red;">2.หากคุณลูกค้าไม่เข้าห้องสนทนาภายในเวลา 15 นาทีนับจากเวลานัดหมายที่จองไว้ ทางเราขอสงวนสิทธิ์ข้ามคิวของคุณลูกค้า</h4>
 
-                <div style="display: flex; justify-content: center; align-items: center; margin: 20px;">
+                <!-- {{-- <div style="display: flex; justify-content: center; align-items: center; margin: 20px;">
                     <img src="{{ asset('storage/payment.jpg') }}" alt="Your Image" style="max-height: 500px; max-width: 300px;">
-                </div>
+                </div> --}} -->
                 <!-- <h1>แนบสลิปการชำระเงิน</h1> -->
-                <form action="/upload" method="post" enctype="multipart/form-data">
-                    <label for="imageUpload">แนบสลิปการชำระเงิน:</label>
-                    <input type="file" id="imageUpload" name="image" accept="image/*" required>
-                    <textarea id="reason" name="reason" rows="4" placeholder="รายละเอียดเพิ่มเติมที่ต้องการแจ้งไว้ (How can we help you?)"></textarea>
+                    <!-- {{-- <label for="imageUpload">แนบสลิปการชำระเงิน:</label> -->
+                    <!-- <input type="file" id="imageUpload" name="image" accept="image/*" required> --}} -->
+                    <!-- <textarea id="reason" name="reason" rows="4" placeholder="รายละเอียดเพิ่มเติมที่ต้องการแจ้งไว้ (How can we help you?)"></textarea> -->
                     <button type="submit">Submit</button>
                 </form>
             </form>
@@ -103,7 +114,7 @@
                     icon: 'success',
                     title: 'บันทึกข้อมูลสำเร็จแล้ว',
                     showConfirmButton: false,
-                    timer: 5000 // 1.5 วินาที
+                    timer: 15000 // 1.5 วินาที
                 });
 
                 return true; // ทำให้ฟอร์มยืนยันต่อไป

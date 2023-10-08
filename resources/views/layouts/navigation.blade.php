@@ -10,8 +10,9 @@
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
                     <a href="/">
-                        <x-application-logo class="block h-9 w-auto fill-none text-gray-800 dark:text-gray-200" />
+                        <x-application-logo class="block h-10 w-auto fill-none text-gray-800 dark:text-gray-200" />
                     </a>
+
                 </div>
 
                 <!-- Navigation Links -->

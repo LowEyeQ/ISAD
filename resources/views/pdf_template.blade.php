@@ -71,11 +71,10 @@
 <body>
     <h1>ใบรับรองการตรวจสุขภาพสัตว์เลี้ยง</h1>
     <div style="margin-left: 67px;">
-        <p>ชื่อสถานพยาบาล &nbsp;&nbsp; โรงพยาบาลสัตว์มะแอ๊ะ(Ma-ae veterinary Hospital) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ใบอนุญาตสถานพยาบาลสัตว์เลขที่ &nbsp; 1135782566</p>
+        <p>ชื่อสถานพยาบาล &nbsp;&nbsp; โรงพยาบาลสัตว์มะแอ๊ะ (Ma-ae veterinary Hospital) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ใบอนุญาตสถานพยาบาลสัตว์เลขที่ &nbsp; 1135782566</p>
         <p> ชื่อ-สกุล &nbsp;&nbsp; {{$Vet->first_name}} {{$Vet->last_name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เลขที่ใบประกอบวิชาชีพการสัตวแพทย์ &nbsp;&nbsp; {{$Vet->veterinary_license}}</p>
         <p>ทำการตรวจสุขภาพสัตว์เลี้ยงชื่อ &nbsp;&nbsp; {{$Pet->pet_name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; สายพันธุ์ &nbsp; {{$Pet->breed}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; เพศ &nbsp;&nbsp;{{$Pet->gender}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; อายุ&nbsp;&nbsp;{{$age_in_months/12| number_format(0)}}&nbsp;&nbsp;ปี&nbsp;&nbsp;{{$age_in_months%12}}&nbsp;&nbsp;เดือน</p>
         <p>หมายเลขไมโครชิพ &nbsp;&nbsp; {{$Pet->microchip}}</p>
-        <p>test &nbsp;&nbsp; {{$Pet->date_of_birth}}</p>
     </div>
     <h1>ผลการตรวจ Physical Examination</h1>
 

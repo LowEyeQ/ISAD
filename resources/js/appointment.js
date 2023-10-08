@@ -2,7 +2,6 @@ const emptyTimeSlots = document.querySelectorAll('.empty-time-slot');
 const timeTable = document.querySelector('.bordered-table');
 let selectedDateCell = null; // เพิ่มตัวแปรเพื่อตรวจสอบว่ามีวันที่ถูกเลือกหรือไม่
 
-
 // JavaScript สำหรับการสร้างปฎิทิน
 const tableBody = document.querySelector('tbody');
 const currentMonthElement = document.getElementById('currentMonth');
@@ -17,7 +16,6 @@ tableBody.addEventListener('click', (event) => {
         updateAppointmentTimes(); // เรียกใช้ฟังก์ชันเมื่อมีการคลิกวันที่
     }
 });
-
 
 function toggleSelectedDate(cell) {
     const cellData = cell.textContent.trim();
@@ -77,8 +75,6 @@ function updateCalendar() {
     }
 }
 
-
-
 prevMonthButton.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() - 1);
     updateCalendar();
@@ -88,6 +84,5 @@ nextMonthButton.addEventListener('click', () => {
     currentDate.setMonth(currentDate.getMonth() + 1);
     updateCalendar();
 });
-
 updateCalendar();
 

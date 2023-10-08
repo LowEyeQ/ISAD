@@ -49,7 +49,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-    
+
     public function pets(){
         return $this->hasMany(Pet::class, 'user_id', 'user_id');
     }

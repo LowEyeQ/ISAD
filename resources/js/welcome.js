@@ -69,8 +69,6 @@ imageWrappers.forEach(function(wrapper, currentIndex, listObj) {
 
 
 
-
-
 const spans = document.querySelectorAll('.word span');
 
 spans.forEach((span, idx) => {

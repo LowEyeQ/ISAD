@@ -8,12 +8,31 @@ body {
     margin: 0;
 }
 
+.logo-link {
+    position: absolute;
+    top: 20px;
+    left: 80px;
+}
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    /* height: 100vh; กำหนดความสูงของกราฟให้เต็มหน้าจอ */
+}
+.Chart-name{
+    font-weight: 500;
+    text-align: center;
+    font-size: 50px;
+    margin-bottom: 10px;
+    margin-top: -10px;
+}
 .name{
     font-weight: 500;
     text-align: center;
     font-size: 50px;
     margin-bottom: 50px;
-    margin-top: -10px;
+    margin-top: 40px;
 }
 
 #currentMonth {
@@ -87,7 +106,7 @@ table td.disabled-time-slot {
 .input_data {
     background-color: #043d40;
     width: 1200px;
-    height: 1200px;
+    height: 1750px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -129,6 +148,23 @@ form textarea {
     outline: none;
     font-size: 16px;
     border-radius: 30px;
+}
+
+
+#check-button {
+    padding: 15px;
+    background: #031238;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+    text-align: center;
+    display: block; /* เพิ่มส่วนนี้ */
+    margin-top: -20px;
 }
 
 form button {
