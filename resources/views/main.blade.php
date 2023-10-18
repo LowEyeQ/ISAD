@@ -35,13 +35,14 @@
             <ul class="dropdown">
                 <a href="#service" class="menu-items">Service</a>
                 <ul class="submenu"style="line-height:40px">
-                    <!-- <li><a href="#" class="sub">Veterinary Delivery</a></li> -->
+                    <li><a href="/EmergencyCall" class="sub">Emergency call</a></li>
                     <li><a href="/videocall" class="sub">Video Call</a></li>
                     <li><a href="/appointment" class="sub">Appointment</a></li>
                     <li><a href="/certificate" class="sub">Certificate</a></li>
                 </ul>
             </ul>
             <a href="#about" class="menu-items">About</a>
+
             <a href="#contact" class="menu-items">Contact</a>
             <a href="{{ route('login') }}" class="menu-items">Login</a>
             <a href="{{ route('register') }}" class="menu-items">Register</a>

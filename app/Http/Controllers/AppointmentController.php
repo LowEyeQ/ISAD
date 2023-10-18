@@ -66,7 +66,7 @@ class AppointmentController extends Controller
 
     public function store(Request $request)
     {
-        
+
         $user = auth()->user();
         $user_id = $user->user_id;
         $formatted_user_id = str_pad($user_id, 6, '0', STR_PAD_LEFT);

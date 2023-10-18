@@ -6,9 +6,8 @@
     "/js/appointment.js": "/js/appointment.js",
     "/js/video_appointment.js": "/js/video_appointment.js",
     "/css/welcome.css": "/css/welcome.css",
+    "/css/certificate.css": "/css/certificate.css",
     "/css/appointment.css": "/css/appointment.css",
     "/css/video_appointment.css": "/css/video_appointment.css",
-    "/css/notify.css": "/css/notify.css",
-    "/css/app.css": "/css/app.css",
-    "/css/certificate.css": "/css/certificate.css"
+    "/css/app.css": "/css/app.css"
 }

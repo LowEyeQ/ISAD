@@ -18,6 +18,7 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ChartController;
 use App\Http\Controllers\AppointmentController;
 use Barryvdh\DomPDF\Facade as PDFFacade;
+use App\Http\Controllers\EmergencyController;
 
 
 /*
@@ -50,7 +51,7 @@ Route::get('dashboard', [DashboardController::class, 'dashboard'])
         ->middleware(['auth', 'verified'])
         ->name('dashboard');
 
-// Route::middleware('auth')->group(function () {
+Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
@@ -59,7 +60,7 @@ Route::get('dashboard', [DashboardController::class, 'dashboard'])
     Route::post('/appointment', [AppointmentController::class, 'store'])->name('appointment');
     Route::get('/videocall', [VideoAppointController::class, 'index'])->name('videocall.index');
     Route::post('/videocall', [VideoAppointController::class, 'store'])->name('videocall');
-// });
+});
 
 Route::get('/sendmail', [MailController::class, 'notification']);
 
@@ -69,6 +70,15 @@ Route::get('/appointments-chart', [ChartController::class, 'index']);
 
 Route::get('/generate-pdf/{exam_id}', [DocController::class, 'createPDF'])->name('generate-pdf') ;
 
+Route::get('/appointments-chart', [ChartController::class, 'index']);
+
+Route::get('/payment', function () {
+    return view('Payment');
+
+});
+Route::get('/EmergencyCall', [EmergencyController::class, 'index'])->name('emergency-call') ;
+
+Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.payNow');
 
 require __DIR__.'/auth.php';
 

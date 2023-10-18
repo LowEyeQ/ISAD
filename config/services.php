@@ -30,5 +30,9 @@ return [
         'secret' => env('AWS_SECRET_ACCESS_KEY'),
         'region' => env('AWS_DEFAULT_REGION', 'us-east-1'),
     ],
-
+    'omise' => [
+        'public_key' => env('OMISE_PUBLIC_KEY', 'pkey_test_5xfl0vi9nwjfr5gdn2r'),
+        'secret_key' => env('OMISE_SECRET_KEY', 'skey_test_5xfl0wa5erk30zy46xx'),
+        'api_version' => env('OMISE_API_VERSION', '2019-05-29'),
+    ],
 ];
