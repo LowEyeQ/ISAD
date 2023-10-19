@@ -10,7 +10,8 @@
     <div id="location">
         <p>Loading location...</p>
     </div>
-
+    <div id="googleMap" style="width: 100%; height: 400px;">
+    </div>
     <!-- สร้างสคริปต์ JavaScript เพื่อรับข้อมูลตำแหน่ง -->
     <script>
         // ตัวอย่างการใช้ JavaScript ในการรับข้อมูลตำแหน่ง
@@ -23,7 +24,11 @@
         function showPosition(position) {
             const latitude = position.coords.latitude;
             const longitude = position.coords.longitude;
+            const mapURL = `https://www.google.com/maps?q=${latitude},${longitude}`;
+             const mapLink = `<a href="${mapURL}" target="_blank">Open in Google Maps</a>`;
+
             document.getElementById('location').innerHTML = 'Latitude: ' + latitude + '<br>Longitude: ' + longitude;
+            document.getElementById('googleMap').innerHTML = mapLink;
         }
 
     </script>

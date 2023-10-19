@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html>
 <head>
     <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -11,4 +11,4 @@
     <script src="{{ asset('js/app.js') }}"></script>
     {!! $chart->script() !!}
 </body>
-</html>
+</html> --}}

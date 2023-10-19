@@ -18,13 +18,13 @@
 
 <body>
     <div class="calendar">
-    <div class="Chart-name">The number of people on the day you selected</div>
+    {{-- <div class="Chart-name">The number of people on the day you selected</div>
 
         <div class="chart-container" id="chart">
             {!!$chart->container() !!}
         </div>
         <script src="{{ asset('js/app.js') }}"></script>
-        {!! $chart->script() !!}
+        {!! $chart->script() !!} --}}
         <!-- <button type="submit" id="check-button">Check</button> -->
 
         <div class="name">Appointment Calendar</div>

@@ -10,10 +10,10 @@
 </head>
 <body>
 
-    <div id="daily-bar-chart">
+    {{-- <div id="daily-bar-chart">
         {!! $chart->container() !!}
     </div>
-    {!! $chart->script() !!}
+    {!! $chart->script() !!} --}}
 </body>
 </html>
 
