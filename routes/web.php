@@ -19,7 +19,7 @@ use App\Http\Controllers\ChartController;
 use App\Http\Controllers\AppointmentController;
 use Barryvdh\DomPDF\Facade as PDFFacade;
 use App\Http\Controllers\EmergencyController;
-
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -59,8 +59,16 @@ Route::middleware('auth')->group(function () {
     Route::get('/appointment', [AppointmentController::class, 'index'])->name('appointment.index');
     Route::post('/appointment', [AppointmentController::class, 'store'])->name('appointment');
     Route::get('/videocall', [VideoAppointController::class, 'index'])->name('videocall.index');
+
     Route::post('/videocall', [VideoAppointController::class, 'store'])->name('videocall');
 });
+
+    // Routes that should be accessible only to users with user_id "000001" go here
+    Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+    Route::get('/admininsert', [AdminController::class, 'index1'])->name('admin.index1');
+    Route::post('/admininsert', [AdminController::class, 'store'])->name('admin.store');
+
+
 
 Route::get('/sendmail', [MailController::class, 'notification']);
 
@@ -77,6 +85,7 @@ Route::get('/payment', function () {
 
 });
 Route::get('/EmergencyCall', [EmergencyController::class, 'index'])->name('emergency-call') ;
+Route::post('/EmergencyCall', [EmergencyController::class, 'store'])->name('upload-image');
 
 Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.payNow');
 
