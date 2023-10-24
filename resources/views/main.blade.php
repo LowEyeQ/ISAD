@@ -38,7 +38,7 @@
                     <li><a href="/EmergencyCall" class="sub">Emergency call</a></li>
                     <li><a href="/videocall" class="sub">Video Call</a></li>
                     <li><a href="/appointment" class="sub">Appointment</a></li>
-                    <li><a href="/certificate" class="sub">Certificate</a></li>
+                    {{-- <li><a href="/certificate" class="sub">Certificate</a></li> --}}
                 </ul>
             </ul>
             <a href="#about" class="menu-items">About</a>

@@ -102,9 +102,7 @@
                         document.getElementById('longitude').value = longitude;
 
                         const phoneNumber = document.getElementById('phoneNumber').value;
-                        const address = document.getElementById('address').value;
-
-                        const phoneLink = `tel:${phoneNumber},,${latitude},${longitude},${address}`;
+                        const phoneLink = `tel:${phoneNumber},,${latitude},${longitude}`;
                         window.location.href = phoneLink;
 
                         // ส่งข้อมูลไปยัง controller ผ่าน AJAX
